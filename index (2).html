@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>115-1 高三上第一次段考 詳解｜Midterm (I)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#E7EBEE; --card:#FDFDFC;
+  --ink:#10202F; --ink-2:#56687A; --ink-3:#7C8B99;
+  --rule:#C6D0D8; --pen:#17457E; --hl:#FFE773; --miss:#A34234;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono','Cascadia Mono',Menlo,Consolas,monospace;
+  --read:'Literata',Georgia,'Times New Roman',serif;
+  --han:'PingFang TC','Microsoft JhengHei','Noto Sans TC',system-ui,sans-serif;
+  --maxw:1180px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--han);font-size:16px;line-height:1.75}
+:focus-visible{outline:2px solid var(--pen);outline-offset:3px;border-radius:2px}
+
+.top{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--rule)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:14px 24px 0}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3);margin:0 0 4px}
+.title{font-size:23px;font-weight:600;margin:0;line-height:1.3}
+.meta{font-family:var(--mono);font-size:12px;color:var(--ink-2);margin:4px 0 0;letter-spacing:.04em}
+.bar{display:flex;gap:7px;align-items:center;flex-wrap:wrap;padding:12px 0 11px;margin-top:10px;border-top:1px solid var(--rule)}
+.chip{font-family:var(--mono);font-size:12px;letter-spacing:.04em;border:1px solid var(--rule);background:transparent;color:var(--ink-2);padding:5px 10px;border-radius:999px;cursor:pointer;text-decoration:none;transition:border-color .15s,color .15s,background .15s}
+.chip:hover{border-color:var(--pen);color:var(--pen)}
+.chip.solid{margin-left:auto;border-color:var(--ink);color:var(--ink);font-weight:500}
+.chip.solid:hover{background:var(--ink);color:var(--card)}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:28px 24px 96px;display:grid;gap:36px;grid-template-columns:minmax(0,1fr) 288px}
+@media (max-width:1020px){.wrap{grid-template-columns:minmax(0,1fr);gap:44px}}
+
+.sec{margin:0 0 48px;scroll-margin-top:136px}
+.sec-head{display:flex;align-items:baseline;gap:12px;padding-bottom:9px;border-bottom:2px solid var(--ink);flex-wrap:wrap}
+.sec-num{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--ink-3)}
+.sec-label{font-size:18px;font-weight:600;margin:0}
+.sec-score{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin-left:auto}
+.sec-inst{font-size:13.5px;color:var(--ink-2);margin:9px 0 0}
+
+.bank{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin:16px 0 0}
+@media (max-width:760px){.bank{grid-template-columns:repeat(2,1fr)}}
+.bank-i{background:var(--card);padding:8px 10px;font-family:var(--read);font-size:14.5px}
+.bank-i span{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin-right:5px}
+.bank-i.used{background:#F2F5F6;color:var(--ink-3)}
+
+.passage{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--ink);padding:22px 26px;margin:18px 0 0;font-family:var(--read);font-size:16.5px;line-height:1.95;color:#1a2836}
+.passage p{margin:0 0 1em}
+.passage p:last-child{margin-bottom:0}
+.blank{display:inline-block;min-width:70px;text-align:center;border:0;border-bottom:1.5px solid var(--ink);font-family:var(--mono);font-size:13px;color:var(--pen);cursor:pointer;background:none;padding:0 4px;line-height:1.4}
+.blank:hover{background:rgba(23,69,126,.07)}
+.blank.filled{font-family:var(--read);font-size:16.5px;color:var(--ink);border-bottom-color:transparent;min-width:0}
+.blank sup{font-family:var(--mono);font-size:10px;color:var(--ink-3);margin-right:2px}
+.zhbtn{display:block;margin:0 0 18px;background:var(--card);border:1px solid var(--rule);border-top:0;width:100%;text-align:left;padding:8px 26px;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--pen);cursor:pointer}
+.zhbtn:hover{color:var(--ink)}
+.zhbtn::after{content:' ▾'}
+.zhbtn.on::after{content:' ▴'}
+.zhbox{display:none;background:#F7F9FA;border:1px solid var(--rule);border-top:0;padding:18px 26px;margin:0 0 18px;font-size:15px;line-height:1.95;color:#22323F}
+.zhbox.on{display:block}
+.zhbox p{margin:0 0 .9em}
+.zhbox p:last-child{margin:0}
+
+.q{background:var(--card);border:1px solid var(--rule);margin:14px 0 0;scroll-margin-top:142px}
+.q-top{padding:16px 22px 14px}
+.q-tag{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.q-n{font-family:var(--mono);font-size:13px;font-weight:600}
+.q-kind{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.prompt{font-size:14.5px;line-height:1.85;color:var(--ink-2);margin:0 0 11px;padding-left:11px;border-left:2px solid var(--rule)}
+.stem{font-family:var(--read);font-size:16.5px;line-height:1.85;margin:0 0 13px;color:#1a2836}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:2px 20px}
+@media (max-width:640px){.opts{grid-template-columns:1fr}}
+.opt{display:flex;gap:9px;font-family:var(--read);font-size:15.5px;line-height:1.6;padding:3px 0;color:#243342}
+.opt-k{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);padding-top:2px;flex:none}
+.reveal{display:block;width:100%;text-align:left;margin-top:14px;background:none;border:0;border-top:1px dashed var(--rule);padding:11px 0 0;font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--pen);cursor:pointer}
+.reveal:hover{color:var(--ink)}
+.reveal::after{content:' ▾'}
+.q.open .reveal::after{content:' ▴'}
+.q.open .reveal{color:var(--ink-3)}
+
+.body{display:none;border-top:1px solid var(--rule);background:#F7F9FA;padding:18px 22px 20px}
+.q.open .body{display:block}
+.ans{display:flex;align-items:baseline;gap:10px;margin:0 0 13px;flex-wrap:wrap}
+.ans-k{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--ink-3);flex:none;padding-top:2px}
+.ans-v{font-family:var(--read);font-size:18px;font-weight:600}
+.fills{list-style:none;margin:0 0 13px;padding:0}
+.fill{display:flex;gap:11px;align-items:baseline;padding:7px 0;border-bottom:1px dotted var(--rule)}
+.fill-k{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);flex:none;width:26px}
+.fill-w{font-family:var(--read);font-size:17px;font-weight:600;flex:none}
+.fill-n{font-size:13.5px;color:var(--ink-2);line-height:1.7}
+.zh{font-size:15px;line-height:1.85;margin:0 0 14px;color:#22323F}
+.why{font-size:14.5px;line-height:1.85;margin:0 0 4px;color:#22323F;border-top:1px solid var(--rule);padding-top:12px}
+.lines{margin:0;padding:0;list-style:none;border-top:1px solid var(--rule)}
+.line{display:flex;gap:11px;padding:9px 0;border-bottom:1px solid var(--rule);font-size:14.5px;line-height:1.75;color:var(--ink-2)}
+.line-k{font-family:var(--mono);font-size:12.5px;flex:none;width:28px;color:var(--ink-3);padding-top:2px}
+.line.right{color:var(--ink)}
+.line.right .line-k{color:var(--ink);font-weight:600}
+.line.right .line-k::after{content:'✓';display:block;font-size:12px;line-height:1.3}
+.line.wrong .line-k{color:var(--miss);opacity:.85}
+.line.wrong .line-k::after{content:'✗';display:block;font-size:12px;line-height:1.3}
+.evid{margin:15px 0 0;font-family:var(--read);font-size:14.5px;line-height:1.8;color:var(--ink-2);padding-left:13px;border-left:2px solid var(--hl)}
+.evid span{font-family:var(--han);font-size:11px;letter-spacing:.14em;color:var(--ink-3);display:block;margin-bottom:3px}
+
+.hl{background-image:linear-gradient(transparent 12%,var(--hl) 12%,var(--hl) 90%,transparent 90%);background-repeat:no-repeat;background-size:0% 100%;transition:background-size .55s cubic-bezier(.2,.75,.3,1);border-radius:1px}
+.hl.on{background-size:100% 100%}
+
+.sample{margin:15px 0 0;border:1px solid var(--rule);border-left:3px solid var(--ink);background:var(--card);padding:16px 20px}
+.sample p:not(.note-h){font-family:var(--read);font-size:15.5px;line-height:1.9;color:#1a2836;margin:0 0 1em}
+.sample p:last-child{margin-bottom:0}
+.bank.wide{grid-template-columns:1fr}
+.bank.wide .bank-i{font-size:15px;line-height:1.7;padding:10px 14px}
+.note{margin:15px 0 0;border:1px solid var(--rule);background:var(--card);padding:13px 16px}
+.note-h{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0 0 9px}
+.note-i{margin:0;padding:9px 0 0;border-top:1px dotted var(--rule)}
+.note-i:first-of-type{border-top:0;padding-top:0}
+.term{font-family:var(--read);font-size:16px;font-weight:600}
+.pos{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin:0 6px}
+.gloss{font-size:14.5px}
+.ex{font-family:var(--read);font-size:14px;color:var(--ink-2);line-height:1.7;margin:3px 0 0;display:block}
+.ex i{font-family:var(--han);font-style:normal;font-size:13px;color:var(--ink-3);display:block}
+
+.side{position:sticky;top:136px;align-self:start;max-height:calc(100vh - 164px);overflow:auto;padding-right:4px}
+@media (max-width:1020px){.side{position:static;max-height:none;scroll-margin-top:136px}}
+.side-h{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);margin:0 0 3px}
+.side-t{font-size:16px;font-weight:600;margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.card-list{margin:0;padding:0;list-style:none}
+.card-item{border-bottom:1px solid var(--rule);padding:11px 0}
+.card-item a{display:block;text-decoration:none;color:inherit}
+.card-item a:hover .term{background:var(--hl)}
+.jump{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);float:right;padding-top:5px}
+.side-note{font-size:12.5px;color:var(--ink-3);line-height:1.7;margin:16px 0 0}
+.foot{max-width:var(--maxw);margin:0 auto;padding:0 24px 48px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--ink-3)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+@media print{
+  body{background:#fff;font-size:10.5pt}
+  .top,.side,.reveal,.foot,.zhbtn{display:none!important}
+  .wrap{display:block;max-width:none;padding:0}
+  .q .body{display:block!important}
+  .zhbox{display:block!important}
+  .q{break-inside:avoid;border-color:#999;margin-bottom:9pt}
+  .passage{break-inside:avoid}
+  .hl{background-size:100% 100%!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <p class="eyebrow" id="brand"></p>
+    <h1 class="title" id="examTitle"></h1>
+    <p class="meta" id="examMeta"></p>
+    <nav class="bar" id="nav"></nav>
+  </div>
+</header>
+
+<div class="wrap"><main id="main"></main><aside class="side" id="side"></aside></div>
+<p class="foot" id="foot"></p>
+
+<script>
+/* ==========================================================================
+   ①  題目與詳解全部寫在下面的 EXAM 物件裡。要改題、加題、修字，只動這裡。
+
+   section（大題）：{ id, label, score, instruction, bank?, groups: [...] }
+   group（同一篇文章的題組）：{ passage?, zh?, questions: [...] }
+       passage 裡寫 __7__ 就會變成可點的空格，數字對應題號。
+       zh 是全文中譯，會做成可展開的按鈕。
+
+   question 依題型三選一：
+     選擇題   { n, kind, stem, options:{A..D}, answer:"B", translation, explain:{A..D}, evidence?, notes? }
+     單一填答 { n, kind, stem, answerText:"prejudice", why, notes? }
+     多格填答 { n, kind, prompt, stem, answers:[{k:"①", w:"字", note:"說明"}], notes? }
+   ========================================================================== */
+const EXAM = {
+  brand: "115-1 高三上 第一次段考",
+  title: "115學年度 第一學期 高三上第一次段考 詳解｜Midterm (I)",
+  meta: "Instructor: Howard Chang　·　範圍：115-1 Midterm (I)",
+  footer: "KGHS 115-1 高三英文 第一次定期考查",
+  sections: [
+  {
+    id:"vo", label:"一、單字慣用語選擇", score:"13% · 每題 1%",
+    instruction:"範圍：龍騰B5 L1-L3 單字片語、單字書Ch.9-1~10-1。答案：C C B A D　D A B A C　B D A",
+    groups:[{
+      questions:[
+        { n:1, kind:"形容詞",
+          stem:"The venture capitalist remained ______ before investing in the startup, as its impressive growth lacked sufficient proof of sustainable success.",
+          options:{A:"keen 熱衷的；敏銳的",B:"frustrated 感到挫折的",C:"wary 提防戒慎的",D:"aggressive 積極進取的；侵略性的"}, answer:"C",
+          translation:"這位創投家在投資這家新創公司之前始終保持戒慎，因為它亮眼的成長缺乏足以證明能持續成功的證據。",
+          explain:{
+            A:"keen 意為「熱衷的」（be keen on sth）或「敏銳的」，是積極正面的態度；但 as 引導的原因子句說它 lacked sufficient proof（缺乏足夠證據），這是讓人踩剎車的理由，不是讓人躍躍欲試的理由。",
+            B:"frustrated 意為「感到挫折的」，指努力卻不得其果的情緒；但創投家還沒投資（before investing），尚未經歷挫敗，情緒上對不上。",
+            C:"wary 意為「提防、戒慎」，指因為心存疑慮而不敢輕舉妄動。兩個線索：時間副詞 before investing（在投資之前）說明他還在觀察階段，而原因子句 lacked sufficient proof of sustainable success（缺乏可持續成功的充分證據）正是他不敢貿然出手的理由。remain wary 是常見搭配。",
+            D:"aggressive 意為「積極進取的」或「侵略性強的」。若創投家態度積極，就會直接投資，與 before investing 的觀望狀態矛盾；而且後面的原因子句是負面的。"
+          },
+          notes:[
+            {term:"be / remain wary of", pos:"phr.", gloss:"對…提防、戒慎（＝be cautious about）。n. wariness", ex:"Investors remain wary of the new market.", exZh:"投資人對這個新市場仍抱持戒心。"},
+            {term:"venture capitalist", pos:"n.", gloss:"創業投資家、創投（venture capital 創投資金；n. venture 創業、冒險事業）"}
+          ]},
+
+        { n:2, kind:"形容詞",
+          stem:"Yayoi Kusama's mirrored rooms challenge our ______ experiences, making familiar small spaces appear infinite.",
+          options:{A:"symbolic 象徵性的",B:"theoretical 理論上的",C:"perceptual 知覺的、感官認知的",D:"indecisive 猶豫不決的"}, answer:"C",
+          translation:"草間彌生的鏡屋挑戰我們的知覺經驗，讓熟悉的小空間看起來無限寬廣。",
+          explain:{
+            A:"symbolic 意為「象徵性的」，指用某物代表抽象意涵；但鏡屋改變的是觀者眼睛所看到的實際感受，不是符號的解讀。",
+            B:"theoretical 意為「理論上的」，形容學說或假設；但 making familiar small spaces appear infinite（讓小空間看起來無限）講的是親身的視覺體驗，不是紙上的理論。",
+            C:"perceptual 意為「知覺的、感官認知的」。線索是分詞構句 making familiar small spaces appear infinite（讓熟悉的小空間看起來無限寬廣）——鏡子改變的正是我們對空間大小的感官判斷，也就是知覺。",
+            D:"indecisive 意為「猶豫不決的」，形容人做決定的態度，不能形容 experiences（經驗）。"
+          },
+          notes:[
+            {term:"perceptual", pos:"adj.", gloss:"知覺的、感官認知的（v. perceive 察覺；n. perception 知覺、看法）", ex:"The illusion plays on our perceptual limits.", exZh:"這個錯覺利用了我們知覺的極限。"},
+            {term:"make + O + 原形V", pos:"句型", gloss:"使…（做某事）。make small spaces appear infinite ＝ 讓小空間看起來無限。appear 後面接形容詞當補語。"}
+          ]},
+
+        { n:3, kind:"名詞",
+          stem:"Nothing could shake her ______ to complete the marathon, not even the blisters that had been steadily worsening since the tenth kilometer of the race.",
+          options:{A:"tendency 傾向",B:"resolve 決心",C:"privilege 特權",D:"obligation 義務"}, answer:"B",
+          translation:"沒有任何事能動搖她完成這場馬拉松的決心，連從第十公里起就持續惡化的水泡也不能。",
+          explain:{
+            A:"tendency 意為「傾向」，指經常如此的習性（a tendency to procrastinate 拖延的傾向）；但傾向不是意志，不會被「動搖」，而且搭配的介系詞雖然也是 to，語意卻不符。",
+            B:"resolve 當名詞意為「決心」，固定搭配是 shake one's resolve（動搖某人的決心）與 one's resolve to V。兩個線索：動詞 shake（動搖）只有意志力才需要被動搖，而 not even the blisters that had been steadily worsening（連持續惡化的水泡也不能）則是用極端的阻礙來反襯這份決心有多強。",
+            C:"privilege 意為「特權、殊榮」，是外界給予的權利；完成馬拉松是自己要達成的目標，不是別人賦予的特權。",
+            D:"obligation 意為「義務」，是不得不做的責任；但本句的語氣是讚揚她的主動堅持，而非被迫履行。這是本題最需要分辨的選項：義務來自外部，決心來自內心。"
+          },
+          notes:[
+            {term:"shake one's resolve", pos:"phr.", gloss:"動搖某人的決心。resolve 當名詞是「決心」（one's resolve to V）；adj. resolute 堅決的", ex:"Nothing shook his resolve to finish the project.", exZh:"沒有任何事動搖他完成這個計畫的決心。"},
+            {term:"not even ...", pos:"用法", gloss:"連…都不。放在否定句之後，用極端的例子加強前面的否定語氣。"}
+          ]},
+
+        { n:4, kind:"動詞",
+          stem:"The sudden collapse of the currency ______ their life savings virtually worthless, wiping out years of careful household budgeting in a single month.",
+          options:{A:"rendered 使成為",B:"declared 宣布、聲明",C:"exposed 暴露、揭露",D:"undermined 暗中削弱"}, answer:"A",
+          translation:"貨幣的突然崩盤使他們畢生的積蓄形同一文不值，一個月之內就抹掉了多年來謹慎的家庭理財成果。",
+          explain:{
+            A:"render + 受詞 + 形容詞 意為「使…變成…」。結構線索很明確：空格後是受詞 their life savings 加上形容詞補語 virtually worthless，正是這個雙受詞句型；而 wiping out years of careful household budgeting（抹掉多年的理財成果）也印證了這個「使之變成」的結果。",
+            B:"declare 雖然也能接受詞加補語（declare him the winner），但它的主詞必須是有宣告能力的人或機構；貨幣崩盤是客觀事件，不會「宣布」什麼。這是結構相同、主詞不合的誘答。",
+            C:"expose 意為「暴露、揭露」，後面接受詞或 expose A to B，不接形容詞補語；而且積蓄是變得沒價值，不是被揭發。",
+            D:"undermine 意為「暗中削弱」，強調的是緩慢而隱蔽的侵蝕過程；但本句的 sudden collapse（突然崩盤）與 in a single month（一個月之內）都強調又快又猛，語感相反。"
+          },
+          notes:[
+            {term:"render + O + adj.", pos:"句型", gloss:"使…變得…（render it useless／worthless／impossible）。同義：make + O + adj.", ex:"The accident rendered him unable to work.", exZh:"這場意外使他無法工作。"},
+            {term:"wipe out", pos:"phr. v.", gloss:"徹底消滅、抹除（wipe out savings／a species／a debt）"}
+          ]},
+
+        { n:5, kind:"動詞",
+          stem:"In the wake of the fatal crash, which killed three schoolchildren at the roadside, officials tried to ______ public anger by promising a thorough and transparent investigation.",
+          options:{A:"foster 培養、助長",B:"dismiss 不予理會",C:"secure 取得、確保；使安全",D:"temper 緩和、使和緩"}, answer:"D",
+          translation:"在那場造成三名學童於路邊喪生的致命車禍之後，官員試圖以承諾進行徹底且透明的調查來緩和民眾的憤怒。",
+          explain:{
+            A:"foster 意為「培養、助長」，是讓某事物增長；但官員要處理的是民怨，絕不會想讓憤怒增加，方向完全相反。",
+            B:"dismiss 意為「不予理會、置之不顧」。官員若對民怨置之不顧，就不會 promising a thorough and transparent investigation（承諾徹底透明的調查）了——後面的方法與這個態度互相矛盾。",
+            C:"secure 意為「取得、確保」，受詞通常是值得爭取的好事物（secure funding／a deal／a position），或是「使某地安全」（secure the area）。但沒有人會想要「確保民怨」存在，而且官員承諾調查的目的是平息怒火而非把它固定下來，語意完全相反。",
+            D:"temper 當動詞意為「緩和、使和緩」。線索是介系詞片語 by promising a thorough and transparent investigation（藉由承諾徹底透明的調查）——這是降溫的手段，而受詞 public anger（公眾憤怒）正是要被降溫的對象。"
+          },
+          notes:[
+            {term:"temper", pos:"vt. / n.", gloss:"vt. 緩和、使和緩（temper criticism／anger／justice with mercy）；n. 脾氣（lose one's temper 發脾氣）", ex:"He tempered his criticism with praise.", exZh:"他以稱讚緩和了他的批評。"},
+            {term:"in the wake of", pos:"phr.", gloss:"在…之後、隨著…而來（wake 原指船行後的航跡）。113 學測小考也考過這個片語。"}
+          ]},
+
+        { n:6, kind:"動詞",
+          stem:"The government imposed travel restrictions to ______ the overflow of tourists during the holiday season.",
+          options:{A:"serve 服務；供應",B:"bridge 彌合（差距）",C:"shield 保護、遮擋",D:"contain 控制、抑制"}, answer:"D",
+          translation:"政府實施旅遊管制措施，以控制假期期間觀光客的過量湧入。",
+          explain:{
+            A:"serve 意為「服務、供應」，受詞是被服務的對象；但政府是要限制人流，不是服務人流，而且 imposed travel restrictions（實施旅遊管制）明顯是約束性的措施。",
+            B:"bridge 當動詞意為「彌合（差距、分歧）」（bridge the gap），受詞是兩者之間的落差；但 overflow（過量湧入）是數量過多的問題，不是落差。",
+            C:"shield 意為「保護、遮擋」，用法是 shield A from B（保護 A 免於 B）；若填入會變成「保護觀光客的過量湧入」，語意不通。",
+            D:"contain 除了「包含」之外，還有「控制、抑制（不使擴大）」的重要用法，受詞常是疫情、火勢、危機或人潮。線索是 imposed travel restrictions（實施旅遊管制）這個抑制性手段，以及受詞 the overflow of tourists（觀光客的過量湧入）這個需要被壓下來的問題。"
+          },
+          notes:[
+            {term:"contain", pos:"vt.", gloss:"① 控制、抑制（contain an outbreak／a fire／a crisis）② 包含。第一個字義是學測與段考的常考點。", ex:"Officials worked to contain the spread of the virus.", exZh:"官員努力控制病毒的擴散。"},
+            {term:"impose", pos:"vt.", gloss:"實施、強加（impose restrictions／a tax／a fine on sb）"}
+          ]},
+
+        { n:7, kind:"形容詞",
+          stem:"The online survey was completely ______, ensuring that participants' identities would not be revealed.",
+          options:{A:"anonymous 匿名的",B:"solitary 獨自的、孤單的",C:"indispensable 不可或缺的",D:"manageable 可應付的"}, answer:"A",
+          translation:"這份線上問卷調查完全匿名，確保參與者的身分不會被揭露。",
+          explain:{
+            A:"anonymous 意為「匿名的」。線索就在分詞構句裡：ensuring that participants' identities would not be revealed（確保參與者的身分不會被揭露），這正是匿名的定義。",
+            B:"solitary 意為「獨自的、孤單的」，形容一個人獨處的狀態；填寫問卷可能是獨自進行，但這與身分是否保密無關。",
+            C:"indispensable 意為「不可或缺的」，是在評價重要性；但後面說明的是隱私保護，不是重要與否。",
+            D:"manageable 意為「可應付的、規模適中的」，形容工作量或難度；與身分保密無關。"
+          },
+          notes:[
+            {term:"anonymous", pos:"adj.", gloss:"匿名的（an anonymous donor／tip-off）。n. anonymity 匿名性；adv. anonymously", ex:"The report was based on anonymous sources.", exZh:"這份報導是根據匿名消息來源寫成的。"},
+            {term:"ensure that ...", pos:"用法", gloss:"確保…。區分：ensure 確保／insure 投保／assure sb 向某人保證。"}
+          ]},
+
+        { n:8, kind:"動詞",
+          stem:"Air purifiers ______ harmful particles out of the air, improving indoor air quality.",
+          options:{A:"distinguish 分辨、區別",B:"filter 過濾",C:"isolate 隔離",D:"prompt 促使、提示"}, answer:"B",
+          translation:"空氣清淨機把有害微粒從空氣中過濾掉，改善室內空氣品質。",
+          explain:{
+            A:"distinguish 意為「分辨」，搭配的是 between A and B 或 A from B；它只是認出差異，並沒有把東西移除的動作，接不上 out of。",
+            B:"filter sth out of sth 是固定搭配，意為「把…從…中過濾掉」。結構線索是空格後的 out of the air（從空氣中出去），只有 filter 能與 out of 構成「濾除」的意思；而 improving indoor air quality（改善室內空氣品質）也正是過濾的結果。",
+            C:"isolate 意為「隔離」，是把某物單獨分開放置（isolate a patient／a variable），但並未把它從系統中移除，而且搭配的介系詞是 from 而非 out of。這是本題最需要分辨的選項。",
+            D:"prompt 意為「促使（某人做某事）」或「提示」，受詞是人或行動，不能接 harmful particles。"
+          },
+          notes:[
+            {term:"filter out", pos:"phr. v.", gloss:"過濾掉、濾除（filter out impurities／noise／harmful particles）。n. filter 濾網", ex:"The app filters out spam messages.", exZh:"這個應用程式會過濾掉垃圾訊息。"},
+            {term:"purifier", pos:"n.", gloss:"淨化器（v. purify 淨化；adj. pure 純淨的）"}
+          ]},
+
+        { n:9, kind:"名詞",
+          stem:"The inventor was granted a ______ for the new device, which gives her exclusive rights to the invention and prevents competitors from copying it.",
+          options:{A:"patent 專利",B:"warranty 保固、保證書",C:"conviction 定罪；堅定信念",D:"subsidy 補助金"}, answer:"A",
+          translation:"這位發明家取得了這項新裝置的專利，這讓她擁有該發明的專屬權利，並防止競爭者抄襲。",
+          explain:{
+            A:"patent 意為「專利」。兩個線索都在關係子句裡：gives her exclusive rights to the invention（賦予她該發明的專屬權利）與 prevents competitors from copying it（防止競爭者抄襲），這兩點正是專利制度的核心功能。動詞 was granted（被授予）也符合專利由政府機關核准的程序。",
+            B:"warranty 意為「保固、保證書」，是賣方對商品品質的承諾，保障的是買方；但本句保障的是發明人的權利，對象不同。這是商業情境中最容易混淆的選項。",
+            C:"conviction 意為「定罪」或「堅定的信念」，前者是刑事判決、後者是個人信仰，都與發明的權利無關。",
+            D:"subsidy 意為「補助金」，是政府給的錢；但 exclusive rights（專屬權利）是法律上的排他權，不是金錢補助。"
+          },
+          notes:[
+            {term:"patent", pos:"n. / vt.", gloss:"專利（apply for／be granted／hold a patent）；當動詞為「取得專利」。113 學測魔鬼氈一文也出現過 received a patent", ex:"The company holds over 200 patents.", exZh:"這家公司持有兩百多項專利。"},
+            {term:"exclusive rights", pos:"phr.", gloss:"專屬權、獨家權利（adj. exclusive 專屬的、排他的）"}
+          ]},
+
+        { n:10, kind:"形容詞",
+          stem:"After soybean oil was found to contain a harmful chemical, the manufacturer could be held ______ for exposing consumers to potential health risks.",
+          options:{A:"judicial 司法的",B:"vertical 垂直的",C:"liable 負有法律責任的",D:"courteous 彬彬有禮的"}, answer:"C",
+          translation:"在大豆油被發現含有有害化學物質之後，該製造商可能要為使消費者暴露於潛在健康風險而負起法律責任。",
+          explain:{
+            A:"judicial 意為「司法的」，形容制度或程序（judicial review 司法審查），不能用來形容某人「要負責」。詞義雖同屬法律領域，但用法完全不同。",
+            B:"vertical 意為「垂直的」，是空間概念，語意完全不合。",
+            C:"be held liable for sth 是固定的法律用語，意為「被認定須為…負法律責任」。線索是被動語態 be held（被認定）與介系詞 for 之後的過失內容 exposing consumers to potential health risks（使消費者暴露於健康風險），再加上前半句油品含有害物質的事實，整句是典型的產品責任情境。",
+            D:"courteous 意為「彬彬有禮的」，形容待人態度；製造商的禮貌與法律責任無關。"
+          },
+          notes:[
+            {term:"be held liable / responsible for", pos:"phr.", gloss:"被認定須為…負責。n. liability 法律責任（本卷 L2+L3 評量也考過 escape liability）", ex:"Employers may be held liable for workplace injuries.", exZh:"雇主可能須為職場傷害負法律責任。"},
+            {term:"expose A to B", pos:"phr.", gloss:"使 A 暴露於 B（expose consumers to risks／children to violence）。n. exposure to"}
+          ]},
+
+        { n:11, kind:"動名詞",
+          stem:"The employee was charged with ______ his manager's signature on the official documents in an attempt to hide the unauthorized transaction.",
+          options:{A:"testifying 作證",B:"forging 偽造",C:"conceding 承認、讓步",D:"articulating 清楚表達"}, answer:"B",
+          translation:"這名員工被控在正式文件上偽造其主管的簽名，企圖掩蓋那筆未經授權的交易。",
+          explain:{
+            A:"testify 意為「作證」，是在法庭上陳述事實，是合法行為；但 was charged with（被控告）表示空格是一項罪行，作證不會被起訴。",
+            B:"forge 意為「偽造（簽名、文件、貨幣）」。三個線索疊在一起：was charged with（被控告）表示這是犯罪、受詞 his manager's signature（主管的簽名）是偽造的典型對象、而 in an attempt to hide the unauthorized transaction（企圖掩蓋未授權的交易）則交代了犯罪動機。",
+            C:"concede 意為「承認（錯誤）、讓步」，是坦白的行為；與「企圖掩蓋」的動機正好相反。",
+            D:"articulate 意為「清楚表達（想法）」，受詞是觀點或感受，接不上簽名，而且清楚表達不是罪行。"
+          },
+          notes:[
+            {term:"forge", pos:"vt.", gloss:"偽造（forge a signature／documents／banknotes）；另有「鍛造、建立（關係）」之意（forge close ties）。n. forgery 偽造罪", ex:"He was jailed for forging passports.", exZh:"他因偽造護照而入獄。"},
+            {term:"be charged with + N/V-ing", pos:"phr.", gloss:"被控以…罪（with 是介系詞，後接名詞或動名詞）。同義：be accused of"}
+          ]},
+
+        { n:12, kind:"名詞",
+          stem:"During the Cold War, socialist and capitalist ______ offered competing views of how economies and societies should be organized.",
+          options:{A:"agendas 議程、待辦事項",B:"commodities 商品、大宗物資",C:"pledges 誓言、承諾",D:"ideologies 意識形態"}, answer:"D",
+          translation:"冷戰期間，社會主義與資本主義的意識形態對於經濟與社會應如何組織，提出了相互競爭的觀點。",
+          explain:{
+            A:"agenda 意為「議程、待辦事項」，是具體會議或政策的項目清單；但 socialist and capitalist（社會主義與資本主義的）修飾的是一整套世界觀，層次比議程高得多。",
+            B:"commodity 意為「商品、大宗物資」（如石油、小麥），是可交易的實物；但它無法 offer competing views（提出相互競爭的觀點）。",
+            C:"pledge 意為「誓言、承諾」，是對未來行動的保證；但本句講的是對社會該如何組織的根本看法，是信念體系而非承諾。",
+            D:"ideology 意為「意識形態」，指一整套關於政治與社會該如何運作的信念系統。兩個線索：形容詞 socialist and capitalist（社會主義與資本主義的）正是冷戰兩大陣營的思想標籤，而 competing views of how economies and societies should be organized（對經濟社會如何組織的相互競爭觀點）就是意識形態的定義。"
+          },
+          notes:[
+            {term:"ideology", pos:"n.", gloss:"意識形態（adj. ideological；adv. ideologically）。112 學測詞彙題也出現 political ideology", ex:"The two parties are divided by ideology.", exZh:"這兩個政黨因意識形態而分裂。"},
+            {term:"competing views", pos:"phr.", gloss:"相互競爭（彼此對立）的觀點。adj. competing 互相競爭的、並存而衝突的"}
+          ]},
+
+        { n:13, kind:"形容詞",
+          stem:"The salesperson gave a(n) ______ speech, persuading the hesitant customers in a clear and powerful way.",
+          options:{A:"eloquent 辯才動人的、極具說服力的",B:"arrogant 傲慢的",C:"reckless 魯莽輕率的",D:"slender 苗條的；微小的"}, answer:"A",
+          translation:"這位銷售員發表了一段極具說服力的談話，以清晰而有力的方式說服了原本猶豫的顧客。",
+          explain:{
+            A:"eloquent 意為「辯才動人的、極具說服力的」。線索是分詞構句 persuading the hesitant customers in a clear and powerful way（以清晰有力的方式說服猶豫的顧客）——clear（清晰）與 powerful（有力）正是 eloquent 的兩大要素，而成功說服更是結果證明。",
+            B:"arrogant 意為「傲慢的」，是負面的態度；傲慢的推銷通常只會把客人趕走，無法 persuading the hesitant customers（說服猶豫的顧客）。",
+            C:"reckless 意為「魯莽輕率的」，形容不顧後果的行為；與 in a clear and powerful way（清晰有力的方式）所顯示的條理分明相反。",
+            D:"slender 意為「苗條的」或「微小的」，前者形容體型、後者形容機會（a slender chance），都不能形容一段談話的說服力。"
+          },
+          notes:[
+            {term:"eloquent", pos:"adj.", gloss:"辯才動人的、極具說服力的（n. eloquence；adv. eloquently）。112+113 學測小考亦考過此字", ex:"She made an eloquent case for reform.", exZh:"她為改革提出了極具說服力的論述。"},
+            {term:"hesitant", pos:"adj.", gloss:"猶豫的、遲疑的（be hesitant to V／about sth）。v. hesitate／n. hesitation"}
+          ]}
+      ]
+    }]
+  },
+
+  {
+    id:"cl", label:"二、綜合測驗", score:"25% · 每題 1%",
+    instruction:"五篇短文。答案：A C B A A　A D C C B　B D C B D　B D D C A　C D B A B",
+    groups:[
+      {
+        passage:"(A) Many Taiwanese know that Kaohsiung was originally called Takau, a Makatao word meaning “bamboo forest.” __14__ many may not realize, however, is that the city's current name is closely connected to Takao, a scenic district in Kyoto, Japan. During the Japanese colonial period, the city's name Takau was pronounced similarly to Takao. In 1920, the Office of the Governor-General of Taiwan issued an ordinance officially changing the city's name from Takau to Kaohsiung. __15__ the colonial government made this change, Kaohsiung might still be known as Takau today. To this day, the historical link between the two places is reflected not only in their names but also in their appeal to visitors. Both boast multiple popular tourist destinations __16__ offer distinctive insights into history and culture, attracting travelers from around the world. __17__ this similarity, the two places have evolved in very different directions. Kyoto's Takao is renowned for its peaceful mountain scenery, stunning autumn foliage, and historic temples; __18__ , Kaohsiung has grown into one of Taiwan's largest port cities, known for its modern skyline, bustling harbor, and vibrant urban life. Although they now differ greatly in character and identity, Kaohsiung's name continues to preserve an unexpected historical connection with Takao in Kyoto.\n\n（第 15 題的空格為一題兩格：______ the colonial government ______ this change）",
+        zh:"許多臺灣人知道高雄原本叫做「打狗」，那是一個馬卡道語的詞，意思是「竹林」。然而，許多人可能沒意識到的是，這座城市現在的名字與日本京都的風景區「高雄」有密切的關聯。在日治時期，「打狗」的發音與日文的「高雄」相近。一九二○年，臺灣總督府發布法令，正式將這座城市的名稱從「打狗」改為「高雄」。要不是殖民政府當年做了這項變更，今天高雄可能還叫做打狗。直到今日，這兩地的歷史連結不只反映在名字上，也反映在它們對遊客的吸引力上。兩地都擁有多個熱門觀光景點，其中有些能提供對歷史與文化的獨特洞見，吸引了世界各地的旅人。儘管有這個相似之處，兩地卻朝著非常不同的方向發展。京都的高雄以寧靜的山景、絕美的秋楓與歷史悠久的寺廟聞名；相較之下，高雄已成長為臺灣最大的港市之一，以現代的天際線、繁忙的港口與充滿活力的都市生活著稱。雖然兩地如今在性格與認同上差異甚大，高雄的名字仍持續保存著與京都高雄之間一段出人意料的歷史連結。",
+        questions:[
+          { n:14, kind:"名詞子句",
+            stem:"______ many may not realize, however, is that the city's current name is closely connected to Takao, a scenic district in Kyoto, Japan.",
+            options:{A:"What 所…的事（複合關係代名詞）",B:"As 如同；因為",C:"Whether 是否",D:"That 那件事（連接詞）"}, answer:"A",
+            translation:"然而，許多人可能沒意識到的是，這座城市現在的名字與日本京都的風景區高雄有密切的關聯。",
+            explain:{
+              A:"整句的主要動詞是 is，所以空格到 realize 之間必須構成一個名詞子句當主詞。關鍵在於 realize 是及物動詞，後面卻沒有受詞——這個空缺必須由複合關係代名詞 What（＝the thing which）填補，它同時擔任子句的受詞與整句的主詞。",
+              B:"As 當連接詞時引導的是副詞子句（As we all know...），不能當主詞；若要表達「如同許多人沒意識到的」，需寫成 As many may not realize, the city's name is...，句構完全不同。",
+              C:"Whether 意為「是否」，雖然也能引導名詞子句當主詞，但它後面的子句必須結構完整；本句 realize 缺受詞，Whether 無法填補這個空缺。而且語意上作者是在陳述事實，不是在問是非。",
+              D:"That 引導名詞子句時，後面的子句同樣必須完整（That he lied is obvious）；realize 缺受詞的問題仍然沒有解決。這是本題最需要分辨的選項：What 自帶先行詞可補空缺，That 只是連接詞不占位置。"
+            },
+            notes:[
+              {term:"What 子句當主詞", pos:"文法", gloss:"What ＝ the thing(s) which，自帶先行詞，在子句中還要擔任主詞或受詞。句型 What S V is that ... 常用於強調。", ex:"What surprised me was his silence.", exZh:"令我驚訝的是他的沉默。"},
+              {term:"What vs. That", pos:"辨析", gloss:"看子句缺不缺成分：缺主詞或受詞用 What；子句完整則用 That。這是名詞子句題的第一步判斷。"}
+            ]},
+
+          { n:15, kind:"假設語氣倒裝",
+            stem:"______ the colonial government ______ this change, Kaohsiung might still be known as Takau today.",
+            options:{A:"If; did not make 如果（與現在事實相反）",B:"If; had made 如果做了（與過去事實相反，但語意顛倒）",C:"Had; not made 要不是當年做了（與過去事實相反的倒裝）",D:"Had; been made 若被做（語態錯誤）"}, answer:"C",
+            translation:"要不是殖民政府當年做了這項變更，今天高雄可能還叫做打狗。",
+            explain:{
+              A:"If + S + 過去式 是與「現在」事實相反的假設；但這件事發生在 In 1920（一九二○年），是明確的過去，時態對不上。",
+              B:"If the colonial government had made this change 的語意是「如果當年做了這個改變」，但事實上殖民政府確實做了，所以假設的內容必須是「沒有做」才構成與事實相反。語意方向完全顛倒。",
+              C:"這是錯綜時間的假設句：條件在過去（一九二○年的改名），結果在現在（today 還叫打狗）。條件部分用與過去事實相反的 If S had not p.p.，省略 if 之後倒裝成 Had S not p.p.；主要子句則用與現在事實相反的 might still be。兩個關鍵線索是上一句的 In 1920 與本句的 today。",
+              D:"Had been made 是被動語態，但主詞 the colonial government 是做這件事的人，必須用主動 made；而且被動形式後面也接不上受詞 this change。"
+            },
+            notes:[
+              {term:"if 省略後的倒裝", pos:"文法", gloss:"Had S (not) p.p. ...／Were S ...／Should S V ...。否定詞 not 要放在主詞之後：Had the government not made...", ex:"Had I known, I would have told you.", exZh:"早知道的話，我就告訴你了。"},
+              {term:"錯綜時間假設句", pos:"整理", gloss:"條件在過去、結果在現在：If S had p.p. ..., S would/might + V（現在式結果）。靠兩個子句各自的時間副詞判斷，本題即 1920 對 today。"}
+            ]},
+
+          { n:16, kind:"關係代名詞",
+            stem:"Both boast multiple popular tourist destinations ______ offer distinctive insights into history and culture, attracting travelers from around the world.",
+            options:{A:"some of which（缺逗號）",B:", some of which 其中有些（補述用法）",C:", some of them（逗號連接兩句，形成逗點謬誤）",D:"some of them（兩個子句直接相連，形成連寫句）"}, answer:"B",
+            translation:"兩地都擁有多個熱門觀光景點，其中有些能提供對歷史與文化的獨特洞見，吸引了世界各地的旅人。",
+            explain:{
+              A:"some of which 確實是正確的關係詞結構，但 which 引導的這個子句是對前面名詞的補充說明，屬於補述用法，前面必須加逗號。沒有逗號會讓它看起來像限定用法，與 multiple（多個）所隱含的「全部」產生矛盾。",
+              B:"空格後有動詞 offer，所以必須用關係代名詞把後面變成形容詞子句。先行詞是 destinations（複數、指物），搭配介系詞片語成為 some of which（其中有些），而且因為是補充說明，前面加逗號。這也呼應語意：不是所有景點都提供歷史文化洞見，只有其中一些。",
+              C:"them 是普通代名詞，不具連接功能；寫成 destinations, some of them offer ... 會用一個逗號連接兩個完整句子，形成逗點謬誤（comma splice）。若要成立，them 後面必須改成分詞 offering。",
+              D:"同樣的問題而且更嚴重：沒有逗號也沒有連接詞，兩個子句直接相連，形成連寫句（run-on sentence）。"
+            },
+            notes:[
+              {term:"介系詞 + which", pos:"文法", gloss:"some/many/most/all of which（指物）／of whom（指人）。引導補述用法的形容詞子句，前面要加逗號。", ex:"He has three cars, two of which are electric.", exZh:"他有三輛車，其中兩輛是電動車。"},
+              {term:"them 不能當連接詞", pos:"技巧", gloss:"空格後有動詞時，要找「關係代名詞」而非普通代名詞。which 兼具連接與代名詞功能，them 只是代名詞。"}
+            ]},
+
+          { n:17, kind:"介系詞",
+            stem:"______ this similarity, the two places have evolved in very different directions.",
+            options:{A:"Despite 儘管",B:"Since 自從；因為",C:"Throughout 貫穿整個…",D:"Besides 除了…還有"}, answer:"A",
+            translation:"儘管有這個相似之處，兩地卻朝著非常不同的方向發展。",
+            explain:{
+              A:"Despite 是介系詞「儘管」，後接名詞片語 this similarity。語意線索是前後的對立：this similarity（這個相似之處）對 very different directions（非常不同的方向），正是讓步關係。而下一段開頭 Although they now differ greatly（雖然兩地差異甚大）也延續了這個讓步語氣。",
+              B:"Since 當介系詞表時間起點（since 1920），當連接詞表原因；但相似之處不會「導致」兩地發展不同，因果關係說不通。",
+              C:"Throughout 意為「貫穿整個（時間或空間）」（throughout the year），後接的是時間或範圍，不能接 this similarity 這個抽象的共同點。",
+              D:"Besides 意為「除了…還有」，是累加關係；但本句前後是對立的，不是補充。這是本題最需要分辨的選項：Besides 加法，Despite 讓步。"
+            },
+            notes:[
+              {term:"despite / in spite of", pos:"phr.", gloss:"儘管（後接名詞片語）。Despite 後面絕對不加 of，這是最常見的錯誤。對照連接詞 although ＋ 子句。", ex:"Despite the warning, he went ahead.", exZh:"儘管有警告，他還是照做了。"},
+              {term:"evolve in different directions", pos:"phr.", gloss:"朝不同方向發展演變。n. evolution 演化、發展"}
+            ]},
+
+          { n:18, kind:"轉折語",
+            stem:"Kyoto's Takao is renowned for its peaceful mountain scenery, stunning autumn foliage, and historic temples; ______ , Kaohsiung has grown into one of Taiwan's largest port cities.",
+            options:{A:"in contrast 相較之下",B:"in essence 本質上",C:"by chance 偶然地",D:"for instance 舉例來說"}, answer:"A",
+            translation:"京都的高雄以寧靜的山景、絕美的秋楓與歷史悠久的寺廟聞名；相較之下，高雄已成長為臺灣最大的港市之一。",
+            explain:{
+              A:"分號前後是兩組完全對立的描述：peaceful mountain scenery（寧靜山景）對 one of Taiwan's largest port cities（最大港市之一）、historic temples（古寺）對 modern skyline（現代天際線），這是典型的對比。而上一句的 have evolved in very different directions（朝非常不同方向發展）已經預告了這個對比。",
+              B:"in essence 意為「本質上」，用於提煉重點或指出核心（In essence, the plan is simple）；但本句不是在歸納本質，而是在並列兩地的差異。",
+              C:"by chance 意為「偶然地」，指事情出於巧合；但高雄發展成港市是長期的歷史過程，不是偶然。",
+              D:"for instance 意為「舉例來說」，後句必須是前句的例子；但臺灣的高雄不是京都高雄的例子，兩者是並列對照的對象。"
+            },
+            notes:[
+              {term:"in contrast", pos:"phr.", gloss:"相較之下（＝by contrast／on the other hand）。in contrast to sth 則是「與…相對」。", ex:"The south is dry; in contrast, the north is wet.", exZh:"南部乾燥，相較之下北部潮濕。"},
+              {term:"先讀前一句", pos:"技巧", gloss:"轉折詞的題目一定要往前讀。前一句的 very different directions 已經定調這段是對比，答案自然是對比類轉折語。"}
+            ]}
+        ]
+      },
+      {
+        passage:"(B) Social networks and instant messaging services have accelerated the spread of fake news in the digital environment. A single sensational headline may attract thousands of readers before anyone has time to slow down and question its __19__ , leaving disinformation unchecked to influence public opinion, damage reputations, and even create unnecessary panic.\n\nTo reduce the risk of __20__ fake news, it is crucial to develop media literacy skills that enable us to distinguish truth from falsehood. Instead of accepting every post at face value, we should __21__ the information prior to forwarding it to our friends. In addition, it is important to exercise __22__ by taking the time to examine who the author is and where the post was published before deciding whether it is credible. Meanwhile, emotional reactions often cloud our judgment, making us more likely to believe or share misleading information. Therefore, we should make an effort to remain __23__ by watching out for provocative language, even when a news story supports our personal beliefs. By learning to think critically and staying alert, we can avoid falling victim to fake news.",
+        zh:"社群網路與即時通訊服務加速了假新聞在數位環境中的擴散。一則聳動的標題可能在任何人有時間慢下來質疑它的真實性之前，就已經吸引了數千名讀者，使不實訊息在未經查核的情況下影響輿論、損害名譽，甚至製造不必要的恐慌。\n\n為了降低受假新聞所騙的風險，培養能讓我們分辨真偽的媒體識讀能力至關重要。與其照字面接受每一則貼文，我們應該在轉傳給朋友之前先查證資訊。此外，花時間檢視作者是誰、貼文發表於何處，再決定它是否可信，這種善盡查證之責的做法也很重要。同時，情緒反應常會模糊我們的判斷，使我們更容易相信或分享誤導性的訊息。因此，即使一則新聞支持我們個人的信念，我們也應該努力留意聳動的措辭，以保持客觀。透過學會批判性思考並保持警覺，我們可以避免成為假新聞的受害者。",
+        questions:[
+          { n:19, kind:"名詞",
+            stem:"A single sensational headline may attract thousands of readers before anyone has time to slow down and question its ______ , leaving disinformation unchecked to influence public opinion.",
+            options:{A:"validity 真實性、有效性",B:"manipulation 操弄、操縱",C:"necessity 必要性",D:"definition 定義"}, answer:"A",
+            translation:"一則聳動的標題可能在任何人有時間慢下來質疑它的真實性之前，就已經吸引了數千名讀者，使不實訊息在未經查核的情況下影響輿論。",
+            explain:{
+              A:"validity 意為「真實性、有效性」，指某項說法站不站得住腳。兩個線索：動詞 question（質疑）後面接的應該是可被檢驗的真偽，而分詞構句 leaving disinformation unchecked（使不實訊息未經查核）更直接點明，沒被質疑的正是它的真假。",
+              B:"manipulation 意為「操弄」，是指幕後操作的行為；讀者質疑的是標題本身是否可信，而不是去質疑「操弄這件事」。語意層次不對。",
+              C:"necessity 意為「必要性」，問的是「有沒有必要存在」；但面對假新聞，我們要問的是「這是不是真的」，不是「有沒有必要」。",
+              D:"definition 意為「定義」，指字詞的意思；質疑一則標題的定義語意不通。"
+            },
+            notes:[
+              {term:"validity", pos:"n.", gloss:"真實性、有效性（adj. valid 有效的、站得住腳的；v. validate 證實）。本卷 L2+L3 評量第 1 題也以它當誘答", ex:"Experts questioned the validity of the data.", exZh:"專家質疑這些數據的真實性。"},
+              {term:"disinformation", pos:"n.", gloss:"刻意散播的不實訊息（dis- 否定 ＋ information）。對照 misinformation 指未必出於惡意的錯誤訊息。"}
+            ]},
+
+          { n:20, kind:"片語動詞",
+            stem:"To reduce the risk of ______ fake news, it is crucial to develop media literacy skills that enable us to distinguish truth from falsehood.",
+            options:{A:"getting at 意指；觸及",B:"telling apart 分辨開來",C:"laying out 陳列、規劃",D:"falling for 受騙上當"}, answer:"D",
+            translation:"為了降低受假新聞所騙的風險，培養能讓我們分辨真偽的媒體識讀能力至關重要。",
+            explain:{
+              A:"get at 意為「意指（What are you getting at?）」或「接觸到」，受詞是意思或目標；接不上 fake news 來表達受害。",
+              B:"tell apart 意為「分辨兩者」，需要兩個比較對象（tell the twins apart）。更關鍵的是語意矛盾：分辨假新聞是我們想要的能力，不是要降低的 risk（風險）。這是本題最需要分辨的選項。",
+              C:"lay out 意為「陳列、規劃（lay out a plan）」，與受假新聞影響無關。",
+              D:"fall for sth 意為「受騙上當、相信了（騙局）」。線索是 reduce the risk of（降低…的風險），空格必須是我們不希望發生的事；而句尾 avoid falling victim to fake news（避免成為假新聞的受害者）也與此呼應。"
+            },
+            notes:[
+              {term:"fall for", pos:"phr. v.", gloss:"受騙上當、信以為真（fall for a scam／a rumor）；另有「愛上某人」之意。本卷 L2+L3 評量亦出現過", ex:"Don't fall for that old trick.", exZh:"別上那個老套騙術的當。"},
+              {term:"distinguish truth from falsehood", pos:"phr.", gloss:"分辨真偽。distinguish A from B 把 A 與 B 區分開來；n. falsehood 虛假、謬誤"}
+            ]},
+
+          { n:21, kind:"動詞",
+            stem:"Instead of accepting every post at face value, we should ______ the information prior to forwarding it to our friends.",
+            options:{A:"illustrate 說明、舉例闡明",B:"shatter 使粉碎",C:"verify 查證、核實",D:"cite 引述、引用"}, answer:"C",
+            translation:"與其照字面接受每一則貼文，我們應該在轉傳給朋友之前先查證資訊。",
+            explain:{
+              A:"illustrate 意為「說明、舉例闡明」，是把事情講清楚給別人聽；但我們對一則來源不明的貼文該做的是先查核，不是去解釋它。",
+              B:"shatter 意為「使粉碎」，受詞是玻璃、希望或信任；資訊不是被打碎的對象。",
+              C:"verify 意為「查證、核實」。線索是 Instead of accepting every post at face value（與其照字面全盤接受）——這個對比結構要求空格填入「不輕信」的具體做法；而 prior to forwarding it to our friends（在轉傳給朋友之前）也點出查核的時機。",
+              D:"cite 意為「引述、引用」，是把來源寫出來供人參考；它處理的是標註出處，不是判斷內容真假。"
+            },
+            notes:[
+              {term:"verify", pos:"vt.", gloss:"查證、核實（verify a claim／the facts／one's identity）。n. verification", ex:"Always verify the source before sharing.", exZh:"分享之前一定要先查證來源。"},
+              {term:"at face value", pos:"phr.", gloss:"照字面、按表面價值（take sth at face value 信以為真、不加懷疑）"}
+            ]},
+
+          { n:22, kind:"名詞片語",
+            stem:"It is important to exercise ______ by taking the time to examine who the author is and where the post was published before deciding whether it is credible.",
+            options:{A:"flawed argument 有缺陷的論證",B:"extensive coverage 廣泛的報導",C:"due diligence 應有的審慎查核",D:"sloppy journalism 草率的新聞作業"}, answer:"C",
+            translation:"此外，花時間檢視作者是誰、貼文發表於何處，再決定它是否可信，這種善盡查證之責的做法也很重要。",
+            explain:{
+              A:"flawed argument 意為「有缺陷的論證」，是負面的評價；但 It is important to exercise ...（重要的是要做…）要求空格是值得提倡的好做法。",
+              B:"extensive coverage 意為「廣泛的報導」，是媒體產出的規模；但本句談的是讀者自己該做的查核工作，主體不同。",
+              C:"exercise due diligence 是固定搭配，意為「善盡應有的審慎查核之責」。線索是 by 之後的具體做法：taking the time to examine who the author is and where the post was published（花時間檢視作者與發表處），這正是盡責查核的標準動作。",
+              D:"sloppy journalism 意為「草率的新聞作業」，同樣是負面的，而且主體是媒體而非讀者。"
+            },
+            notes:[
+              {term:"exercise due diligence", pos:"phr.", gloss:"善盡應有的審慎查核之責（due 應有的、適當的；diligence 勤勉、盡責）。商業與法律領域的常用語", ex:"Buyers should exercise due diligence before signing.", exZh:"買方在簽約前應善盡審慎查核之責。"},
+              {term:"exercise 的名詞受詞", pos:"用法", gloss:"exercise 除了「運動」，還可當「行使、施展」：exercise caution 謹慎行事／exercise one's right 行使權利／exercise patience 展現耐心。"}
+            ]},
+
+          { n:23, kind:"形容詞",
+            stem:"We should make an effort to remain ______ by watching out for provocative language, even when a news story supports our personal beliefs.",
+            options:{A:"notable 值得注意的、顯著的",B:"objective 客觀的",C:"trustworthy 值得信賴的",D:"imminent 即將發生的"}, answer:"B",
+            translation:"因此，即使一則新聞支持我們個人的信念，我們也應該努力留意聳動的措辭，以保持客觀。",
+            explain:{
+              A:"notable 意為「值得注意的、顯著的」，是別人對你的評價；但本句要講的是讀者自己該保持的心態。",
+              B:"objective 意為「客觀的」，指不受個人情感與立場左右。三個線索：前一句說 emotional reactions often cloud our judgment（情緒反應會模糊判斷）、本句的手段是 watching out for provocative language（留意聳動措辭）、而讓步子句 even when a news story supports our personal beliefs（即使新聞支持我們的信念）更明確指出要防的是自己的偏好。",
+              C:"trustworthy 意為「值得信賴的」，形容的是「別人能不能信任你」；但這裡的問題是「我們能不能客觀判斷別人」，方向相反。這是本題最需要分辨的選項。",
+              D:"imminent 意為「即將發生的」，形容事件迫在眉睫（an imminent threat），不能形容人的心態。"
+            },
+            notes:[
+              {term:"objective", pos:"adj. / n.", gloss:"adj. 客觀的（反義 subjective 主觀的）；n. 目標。n. objectivity 客觀性。本卷 L2+L3 評量亦以它當誘答", ex:"A good reporter stays objective.", exZh:"好的記者保持客觀。"},
+              {term:"provocative", pos:"adj.", gloss:"挑釁的、刻意激起反應的（v. provoke 激起；n. provocation）"}
+            ]}
+        ]
+      },
+      {
+        passage:"(C) Road safety has become an increasingly urgent public concern across Taiwan in recent years, especially regarding the challenges posed by elderly drivers, leading authorities to reconsider current regulations. Historically, Taiwan has approached this issue carefully, favoring gradual reform over sweeping change, a philosophy long __24__ the fabric of Taiwan's road safety policy. Yet, change is now accelerating: as of May 2026, the age threshold for __25__ license renewal has been lowered from 75 to 70.\n\nUnder the new system, drivers aged 70 to 74 must pass a physical examination and complete a road safety course before renewing their licenses; those who meet these criteria may retain their licenses until age 75. As drivers get older, the requirements become stricter: from age 75 onward, licenses must be renewed every three years, and drivers must __26__ undergo a cognitive function test to detect early signs of impaired memory, orientation, or reaction time. To maintain the __27__ of the process, the tests are administered by licensed professionals rather than left to self-assessment. Those who cannot demonstrate continued fitness to drive may be asked to __28__ their licenses. These measures reflect a fundamental shift in road safety policy, balancing older drivers' freedom with the need to keep the public safe.",
+        zh:"近年來，道路安全已成為臺灣日益迫切的公共議題，尤其是高齡駕駛所帶來的挑戰，促使當局重新檢討現行法規。從過去以來，臺灣對這個議題一向謹慎處理，偏好漸進改革而非全面翻修，這個理念長久以來已深織於臺灣道路安全政策的肌理之中。然而改變正在加速：自二○二六年五月起，強制換照的年齡門檻已從七十五歲降至七十歲。\n\n在新制度下，七十到七十四歲的駕駛必須通過體檢並完成道路安全課程才能換照；符合這些條件者可保有駕照至七十五歲。隨著駕駛年齡增長，要求也更加嚴格：從七十五歲起，駕照必須每三年更換一次，而且駕駛還必須額外接受認知功能測驗，以偵測記憶、方向感或反應時間受損的早期徵兆。為了維持這個程序的公信力，測驗由領有執照的專業人員施測，而非交由自我評估。那些無法證明自己仍適合駕駛的人，可能會被要求繳回駕照。這些措施反映了道路安全政策的根本轉向，在高齡駕駛的自由與維護公眾安全的需求之間取得平衡。",
+        questions:[
+          { n:24, kind:"分詞片語",
+            stem:"Taiwan has approached this issue carefully, favoring gradual reform over sweeping change, a philosophy long ______ the fabric of Taiwan's road safety policy.",
+            options:{A:"steeped in 浸潤於、充滿著",B:"woven into 編織進…之中",C:"making for 前往；促成",D:"piecing together 拼湊起來"}, answer:"B",
+            translation:"臺灣對這個議題一向謹慎處理，偏好漸進改革而非全面翻修，這個理念長久以來已深織於臺灣道路安全政策的肌理之中。",
+            explain:{
+              A:"be steeped in sth 意為「浸潤於、充滿著（傳統、歷史）」，但主詞是被浸潤的那一方（a town steeped in history 一座充滿歷史的小鎮）。本句的主詞 a philosophy 是被織入政策的那一方，方向相反，而且 steeped 搭配 in 時後面接的是浸潤的環境，不是 the fabric 這種被織入的載體。",
+              B:"be woven into the fabric of sth 是固定的隱喻搭配，意為「深織於…的肌理之中」，形容某種理念已成為整體結構中不可分割的一部分。關鍵線索就是 the fabric（織物、肌理）這個字——fabric 與 weave（編織）是同一組比喻；而副詞 long（長久以來）也呼應這是長期累積的結果。",
+              C:"make for 意為「前往」或「促成」，受詞是地點或結果；而且 a philosophy long making for the fabric 語意不通。",
+              D:"piece together 意為「把碎片拼湊起來」，受詞是零散的線索或真相（piece together the evidence）；但 the fabric of policy 是既存的整體，不是等待被拼湊的碎片。"
+            },
+            notes:[
+              {term:"be woven into the fabric of", pos:"phr.", gloss:"深織於…的肌理之中、成為…不可分割的一部分。fabric 在此指「（社會、制度的）結構、肌理」", ex:"Volunteering is woven into the fabric of this community.", exZh:"志願服務已深植於這個社區的肌理之中。"},
+              {term:"同字根的比喻要配對", pos:"技巧", gloss:"看到 fabric（織物）就該想到 weave（編織）。英文的固定比喻常是同一個意象家族，這是慣用語題最快的解法。"}
+            ]},
+
+          { n:25, kind:"形容詞",
+            stem:"As of May 2026, the age threshold for ______ license renewal has been lowered from 75 to 70.",
+            options:{A:"figurative 比喻的、象徵的",B:"eligible 符合資格的",C:"concise 簡潔的",D:"mandatory 強制性的"}, answer:"D",
+            translation:"自二○二六年五月起，強制換照的年齡門檻已從七十五歲降至七十歲。",
+            explain:{
+              A:"figurative 意為「比喻的」，形容語言的用法（figurative meaning 比喻義）；換照是實際的行政程序，不是修辭。",
+              B:"eligible 意為「符合資格的」，但它形容的是「人」（be eligible for sth），而且語意方向相反：本句講的是到了某個年齡「必須」換照，是義務；eligible 講的是「有權」做某事，是權利。這是本題最需要分辨的選項。",
+              C:"concise 意為「簡潔的」，形容文字或說明的篇幅，與換照制度無關。",
+              D:"mandatory 意為「強制性的」。線索是整段的語氣：must pass a physical examination（必須通過體檢）、licenses must be renewed every three years（駕照必須每三年更換）、may be asked to surrender their licenses（可能被要求繳回駕照），全段都在講法定義務，而 the age threshold（年齡門檻）正是強制換照的起始年齡。"
+            },
+            notes:[
+              {term:"mandatory", pos:"adj.", gloss:"強制性的、法定必須的（＝compulsory／obligatory；反義 voluntary 自願的）", ex:"Helmets are mandatory for all riders.", exZh:"所有騎士都必須戴安全帽。"},
+              {term:"權利還是義務", pos:"技巧", gloss:"eligible 是「有資格、可以」（權利）；mandatory 是「必須」（義務）。看段落裡 must 出現的密度就能判斷。"}
+            ]},
+
+          { n:26, kind:"副詞",
+            stem:"From age 75 onward, licenses must be renewed every three years, and drivers must ______ undergo a cognitive function test to detect early signs of impaired memory.",
+            options:{A:"contrarily 相反地",B:"externally 在外部地、對外",C:"additionally 此外、額外地",D:"instead 反而、取而代之"}, answer:"C",
+            translation:"從七十五歲起，駕照必須每三年更換一次，而且駕駛還必須額外接受認知功能測驗，以偵測記憶受損的早期徵兆。",
+            explain:{
+              A:"contrarily 意為「相反地」，用於引出與前面相對立的情況；但「每三年換照」與「接受認知測驗」是方向一致、同時加嚴的兩項規定，彼此並不衝突。",
+              B:"externally 意為「在外部地、對外」，修飾的是動作發生的位置或對象；但認知測驗是這套換照制度內部新增的一道程序，與「對外或對內」無關。",
+              C:"additionally 意為「此外、額外地」，用於累加同方向的內容。線索是連接詞 and 與整段的遞進結構：前一句說 the requirements become stricter（要求變得更嚴格），接著列出兩項規定——每三年換照、再加上認知測驗。這是項目的疊加。",
+              D:"instead 意為「反而、取而代之」，表示用後者替換前者；但認知測驗不是取代換照規定，兩者是同時要求的。這是本題最需要分辨的選項：additionally 是加法，instead 是替換。"
+            },
+            notes:[
+              {term:"additionally", pos:"adv.", gloss:"此外、額外地（＝in addition／furthermore／moreover）", ex:"Additionally, all staff must attend the briefing.", exZh:"此外，全體員工都必須參加簡報。"},
+              {term:"加法還是替換", pos:"技巧", gloss:"問自己「前項還成立嗎」。兩項規定並存＝加法（additionally）；後者取代前者＝替換（instead）；前後對立＝contrarily。本題 and 已經先告訴你是並列。"}
+            ]},
+
+          { n:27, kind:"名詞",
+            stem:"To maintain the ______ of the process, the tests are administered by licensed professionals rather than left to self-assessment.",
+            options:{A:"formation 形成、組成",B:"credibility 公信力、可信度",C:"logic 邏輯",D:"significance 重要性"}, answer:"B",
+            translation:"為了維持這個程序的公信力，測驗由領有執照的專業人員施測，而非交由自我評估。",
+            explain:{
+              A:"formation 意為「形成、組成」，指事物成形的過程或結構；但本句要維護的是制度能否讓人信服，不是它如何組成。",
+              B:"credibility 意為「公信力、可信度」。線索是對比結構：administered by licensed professionals（由領照專業人員施測）對 left to self-assessment（交由自我評估）——找專業人員而不讓駕駛自評，目的正是讓測驗結果能被大眾信任。",
+              C:"logic 意為「邏輯」，指推理的嚴謹；但這裡的問題不是推論嚴不嚴密，而是公信力夠不夠。",
+              D:"significance 意為「重要性」，指某事物有多關鍵；但由誰施測影響的是結果可不可信，不會改變這項制度的重要性。"
+            },
+            notes:[
+              {term:"credibility", pos:"n.", gloss:"公信力、可信度（adj. credible 可信的）。本卷 L2+L3 評量第 1 題也考過此字，是 L2 媒體識讀的核心字", ex:"Independent audits protect the credibility of the system.", exZh:"獨立查核保障了這套制度的公信力。"},
+              {term:"administer", pos:"vt.", gloss:"施行、實施（administer a test／medicine／justice）；也指「管理」。n. administration"}
+            ]},
+
+          { n:28, kind:"動詞",
+            stem:"Those who cannot demonstrate continued fitness to drive may be asked to ______ their licenses.",
+            options:{A:"prioritize 優先處理",B:"commit 承諾；犯（罪）",C:"extend 延長；給予",D:"surrender 繳交、放棄"}, answer:"D",
+            translation:"那些無法證明自己仍適合駕駛的人，可能會被要求繳回駕照。",
+            explain:{
+              A:"prioritize 意為「優先處理」，受詞是待辦事項或目標；駕照不是可以排序的工作項目。",
+              B:"commit 意為「承諾（commit oneself to sth）」或「犯罪（commit a crime）」，兩種用法都接不上 their licenses。",
+              C:"extend 意為「延長」或「給予」。延長駕照是通過測驗者的待遇，但本句的主詞是 Those who cannot demonstrate continued fitness（無法證明仍適合駕駛的人），結果必須是相反的。這是本題語意最對立的誘答。",
+              D:"surrender 意為「繳交、放棄（權利、證件）」。線索是關係子句的否定語氣 cannot demonstrate continued fitness to drive（無法證明仍適合駕駛）——既然不適合開車，自然要把駕照交出來。"
+            },
+            notes:[
+              {term:"surrender", pos:"vt. / vi.", gloss:"繳交、放棄（surrender one's passport／licence／rights）；也指「投降」", ex:"He was ordered to surrender his passport.", exZh:"他被命令繳交護照。"},
+              {term:"fitness to V", pos:"phr.", gloss:"適合做某事的狀態、適任性（fitness to drive／to practice medicine）。adj. fit 適合的、健康的"}
+            ]}
+        ]
+      },
+      {
+        passage:"(D) The elevator display reads “433,” the number of meters below ground. The doors slide open, revealing the entrance to what is expected to be the world's first permanent repository for radioactive spent nuclear fuel. Securely __29__ deep inside 1.9-billion-year-old stable bedrock in southwest Finland, the geological repository for spent nuclear waste is nearly ready to start operations. Known as Onkalo, meaning “cave” in Finnish, the facility has been __30__ since 2004, gradually forming a vast network of underground tunnels.\n\nBefore being transported underground, highly radioactive fuel rods will be encapsulated in highly __31__ copper canisters to prevent gradual metal oxidation. The canisters will then be lowered into holes drilled in the tunnels, before the holes are filled with bentonite clay to seal them. When wet, this special clay expands, helping __32__ water __32__ reaching the waste. Finally, once each 300-meter-long disposal tunnel is filled, it will be sealed with a steel-reinforced concrete plug.\n\nSo far, Onkalo has received broad backing in Finland. Supporters argue that Onkalo offers an answer to one of nuclear energy's biggest questions: what to do with dangerous waste. __33__ , experts warn that the long-term risks of geological shifts during future ice ages remain difficult to predict. Whatever the future may bring, Onkalo is set to play a major role in Finland's long-term approach to nuclear waste.\n\n（第 32 題的空格為一題兩格：helping ______ water ______ reaching the waste）",
+        zh:"電梯顯示器上寫著「433」，那是地下的公尺數。門滑開，露出通往預計將成為世界第一座放射性用過核燃料永久處置場的入口。這座用過核廢料的地質處置場安穩地建造在芬蘭西南部一塊十九億年歷史的穩定岩床深處，如今已幾乎準備好開始運轉。這座設施名為 Onkalo，在芬蘭文中意為「洞穴」，自二○○四年起一直在施工中，逐漸形成一個龐大的地下隧道網。\n\n在被運送到地下之前，高放射性的燃料棒會被封裝在高度耐腐蝕的銅罐之中，以防止金屬逐漸氧化。這些罐子接著會被降入隧道中鑽好的孔洞，然後以膨潤土黏土填滿孔洞加以封閉。這種特殊的黏土遇水會膨脹，有助於阻擋水接觸到廢料。最後，每一條三百公尺長的處置隧道一旦填滿，就會以鋼筋混凝土塞封住。\n\n到目前為止，Onkalo 在芬蘭獲得廣泛的支持。支持者主張 Onkalo 為核能最大的難題之一提供了答案：危險的廢料該怎麼處理。儘管如此，專家警告，未來冰河期地質變動的長期風險仍然難以預測。無論未來如何，Onkalo 都將在芬蘭長期的核廢料處理方針中扮演重要角色。",
+        questions:[
+          { n:29, kind:"分詞構句",
+            stem:"Securely ______ deep inside 1.9-billion-year-old stable bedrock in southwest Finland, the geological repository for spent nuclear waste is nearly ready to start operations.",
+            options:{A:"build（原形動詞）",B:"built（過去分詞）",C:"building（現在分詞）",D:"to build（不定詞）"}, answer:"B",
+            translation:"這座用過核廢料的地質處置場安穩地建造在芬蘭西南部一塊十九億年歷史的穩定岩床深處，如今已幾乎準備好開始運轉。",
+            explain:{
+              A:"原形動詞不能用來引導分詞構句。句首到逗號之間是修飾主詞的分詞片語，必須用分詞形式。",
+              B:"句首是分詞構句，修飾主要子句的主詞 the geological repository（地質處置場）。判斷主動或被動的方法是還原成完整子句：處置場是「被建造」的，不是自己建造別的東西，所以用過去分詞 built（＝Since it is securely built deep inside...）。副詞 Securely 修飾的也正是建造的方式。",
+              C:"現在分詞 building 表主動，意思會變成「這座處置場正在建造某物」；但處置場是被建造的對象，語態錯誤。這是本題最需要分辨的選項：分詞構句的主被動，取決於主要子句的主詞是做動作還是受動作。",
+              D:"不定詞 to build 置於句首表目的（To build..., we need...），但那樣主要子句的主詞必須是建造者；本句主詞是建築物本身，不合。"
+            },
+            notes:[
+              {term:"分詞構句的主被動", pos:"文法", gloss:"還原成子句看主詞：主詞做動作用 V-ing，主詞受動作用 p.p.。（Being）built... 的 Being 通常省略。", ex:"Written in 1920, the novel still sells well.", exZh:"這本寫於一九二○年的小說至今仍暢銷。"},
+              {term:"repository", pos:"n.", gloss:"貯存庫、處置場（a repository for nuclear waste）。spent nuclear fuel 用過的核燃料"}
+            ]},
+
+          { n:30, kind:"介系詞片語",
+            stem:"Known as Onkalo, meaning “cave” in Finnish, the facility has been ______ since 2004, gradually forming a vast network of underground tunnels.",
+            options:{A:"on request 依要求、一經索取",B:"beyond doubt 毫無疑問",C:"in circulation 流通中",D:"under construction 施工中"}, answer:"D",
+            translation:"這座設施名為 Onkalo，在芬蘭文中意為「洞穴」，自二○○四年起一直在施工中，逐漸形成一個龐大的地下隧道網。",
+            explain:{
+              A:"on request 意為「依要求、一經索取即提供」（Samples are available on request），用於服務或資料的提供；一座設施不會「依要求而存在」。",
+              B:"beyond doubt 意為「毫無疑問」，是對真實性的斷定；但 since 2004 這個持續的時間標記要搭配的是一個持續進行的狀態，不是一個判斷。",
+              C:"in circulation 意為「流通中」，主詞多為貨幣、刊物或謠言；一座地下處置場不會流通。",
+              D:"under construction 意為「施工中、興建中」。兩個線索：時間副詞 since 2004（自二○○四年起）配合現在完成式 has been，表示從那時持續至今的狀態；而分詞構句 gradually forming a vast network of underground tunnels（逐漸形成龐大的地下隧道網）正是施工進程的描述。"
+            },
+            notes:[
+              {term:"under construction", pos:"phr.", gloss:"施工中、興建中。同類 under 片語：under repair 修繕中／under review 審查中／under discussion 討論中／under way 進行中", ex:"The new bridge is still under construction.", exZh:"這座新橋仍在施工中。"},
+              {term:"have been + 狀態 + since", pos:"時態", gloss:"現在完成式配 since ＋ 時間點，表示從過去持續到現在。空格要填可持續的狀態，不是一次性的判斷。"}
+            ]},
+
+          { n:31, kind:"複合形容詞",
+            stem:"Highly radioactive fuel rods will be encapsulated in highly ______ copper canisters to prevent gradual metal oxidation.",
+            options:{A:"heat-sensitive 對熱敏感的",B:"labor-intensive 勞力密集的",C:"mineral-rich 富含礦物的",D:"corrosion-resistant 耐腐蝕的"}, answer:"D",
+            translation:"高放射性的燃料棒會被封裝在高度耐腐蝕的銅罐之中，以防止金屬逐漸氧化。",
+            explain:{
+              A:"heat-sensitive 意為「對熱敏感的」，指遇熱就會變化或損壞；但封裝核廢料的容器需要的是穩定耐久，對熱敏感反而是缺點。",
+              B:"labor-intensive 意為「勞力密集的」，形容產業或工序需要大量人力；它描述的是生產方式，不是材料的物理特性。",
+              C:"mineral-rich 意為「富含礦物的」，形容土壤或水質；銅罐的礦物含量與防鏽無關。",
+              D:"corrosion-resistant 意為「耐腐蝕的」。決定性線索是不定詞表目的的 to prevent gradual metal oxidation（以防止金屬逐漸氧化）——氧化就是腐蝕生鏽，而能防止它的材料特性正是耐腐蝕。"
+            },
+            notes:[
+              {term:"-resistant", pos:"字尾", gloss:"耐…的、抗…的：corrosion-resistant 耐腐蝕／heat-resistant 耐熱／water-resistant 防水／drought-resistant 抗旱。113 學測也考過 heat-tolerant（耐熱的）", ex:"The coating is corrosion-resistant.", exZh:"這層塗料具有耐腐蝕性。"},
+              {term:"oxidation", pos:"n.", gloss:"氧化（v. oxidize；n. oxygen 氧）。金屬氧化即為生鏽、腐蝕"}
+            ]},
+
+          { n:32, kind:"動詞片語",
+            stem:"When wet, this special clay expands, helping ______ water ______ reaching the waste.",
+            options:{A:"convert... into 把…轉變成",B:"deprive... of 剝奪…的",C:"block... from 阻擋…使其不能",D:"fortify... against 強化…以抵禦"}, answer:"C",
+            translation:"這種特殊的黏土遇水會膨脹，有助於阻擋水接觸到廢料。",
+            explain:{
+              A:"convert A into B 意為「把 A 轉變成 B」，into 後面必須接轉變的結果（名詞）；但本句第二格後面是動名詞 reaching，而且黏土並沒有把水變成別的東西。",
+              B:"deprive A of B 意為「剝奪 A 的 B」，of 後面接被剝奪的事物，而且受詞 A 通常是人；說「剝奪水接觸廢料的權利」不合邏輯。",
+              C:"block A from V-ing 意為「阻擋 A 做某事」。兩個結構線索：第一格要填能接受詞 water 的動詞，第二格後面是動名詞 reaching，而 from 正是後接動名詞的介系詞。語意上，黏土 expands（膨脹）把孔洞填滿，作用就是擋住水不讓它接觸廢料。",
+              D:"fortify A against B 意為「強化 A 以抵禦 B」，受詞 A 是被強化的對象；但本句要被阻擋的是 water（水），水不是被強化的一方。"
+            },
+            notes:[
+              {term:"block / prevent / stop A from V-ing", pos:"句型", gloss:"阻止 A 做某事。同類：keep A from V-ing／prohibit A from V-ing。from 後面一律接動名詞。", ex:"The barrier blocks noise from entering.", exZh:"這道屏障阻擋噪音進入。"},
+              {term:"看第二格定答案", pos:"技巧", gloss:"一題兩格的片語題，先看第二格後面的詞性。本題第二格後是動名詞 reaching，只有 from 能接，一步定案。"}
+            ]},
+
+          { n:33, kind:"轉折語",
+            stem:"Supporters argue that Onkalo offers an answer to one of nuclear energy's biggest questions: what to do with dangerous waste. ______ , experts warn that the long-term risks of geological shifts during future ice ages remain difficult to predict.",
+            options:{A:"Still 儘管如此、然而",B:"Hence 因此",C:"Otherwise 否則",D:"Similarly 同樣地"}, answer:"A",
+            translation:"支持者主張 Onkalo 為核能最大的難題之一提供了答案：危險的廢料該怎麼處理。儘管如此，專家警告，未來冰河期地質變動的長期風險仍然難以預測。",
+            explain:{
+              A:"Still 當轉折副詞意為「儘管如此、然而」。線索是前後兩句的立場對立：Supporters argue that Onkalo offers an answer（支持者認為它解決了問題）對 experts warn that the long-term risks ... remain difficult to predict（專家警告長期風險難以預測），一正一反。",
+              B:"Hence 意為「因此」，表因果；但支持者的肯定並不會「導致」專家提出警告，兩者是對立的立場而非因果鏈。",
+              C:"Otherwise 意為「否則」，引出不照做的後果；但本句不是在談條件與後果，而是在並列兩種相反的看法。",
+              D:"Similarly 意為「同樣地」，用於前後立場一致時；但支持與警告正好相反。這是本題最需要分辨的選項：看清 Supporters 與 experts warn 是兩個對立的陣營。"
+            },
+            notes:[
+              {term:"still", pos:"adv.", gloss:"① 儘管如此、然而（轉折）② 仍然（時間）。當句首加逗號時通常是轉折用法，等於 nevertheless。", ex:"The plan is costly. Still, it may be worth trying.", exZh:"這個計畫很花錢。儘管如此，或許值得一試。"},
+              {term:"argue vs. warn", pos:"技巧", gloss:"看動詞就能判斷立場：argue／claim／maintain 多為主張支持；warn／caution／question 則是提出疑慮。兩者相遇必為轉折。"}
+            ]}
+        ]
+      },
+      {
+        passage:"(E) In an Assam tea garden, a drainage ditch is barely a meter deep. While such a trench is a small inconvenience to a grown elephant, it can be __34__ to a calf that has never learned to navigate rough ground. Young elephants often slip in and cannot climb out, and mothers that dig at the soft walls to reach them may be trapped by the falling mud. Since elephants generally do not desert an injured companion, a whole herd may __35__ beside a ditch for hours, waiting for a calf that cannot rise.\n\nFor decades Assam's tea gardens have pushed into the forest belts that once separated farmland from reserved land. Elephants travel by memory, following the routes their families have used for generations. With their ancient corridors __36__ beneath neat rows of tea, the herds have no way around the plantations and must walk straight through them. Once inside, the animals find little to eat, since tea leaves are of no use to them. Worse still, many villagers walking home through the fenced plantations after dark are killed when they encounter elephants. In fact, nearly 800 people have died in Assam in the past decade. Fences do little to deter an animal weighing several tons. __37__ , they become obstacles to the villagers' escape.\n\nTo foster peaceful coexistence between villagers and elephants, organizations like Elephant Friendly Tea certify gardens that take __38__ against accidents, such as filling trenches and leaving old corridors open. Through these efforts, the organization hopes to raise public awareness of eco-friendly farming.",
+        zh:"在阿薩姆的茶園裡，一條排水溝深度不到一公尺。對一頭成年象來說，這樣的溝渠只是個小小的不便，但對一隻從未學會如何走過崎嶇地面的小象而言，它可能是致命的危險。幼象常常滑進去又爬不出來，而在軟土壁上挖掘想要接近牠們的母象，則可能被塌落的泥土困住。由於大象通常不會拋棄受傷的同伴，整個象群可能在溝邊徘徊數小時，等著一隻爬不起來的小象。\n\n數十年來，阿薩姆的茶園不斷向森林帶推進，那些森林帶曾經是農地與保留地之間的分隔。大象靠記憶移動，沿著家族世代使用的路線前進。隨著牠們古老的廊道被埋在整齊的茶樹行列之下，象群無法繞過這些茶園，只能直接穿越。一旦進入其中，這些動物找不到什麼可吃的東西，因為茶葉對牠們毫無用處。更糟的是，許多村民在天黑後穿越圍起來的茶園返家時，遭遇大象而喪命。事實上，過去十年間阿薩姆已有將近八百人死亡。圍籬對一頭重達數噸的動物幾乎毫無嚇阻作用。反而，它們成了村民逃生的障礙。\n\n為了促進村民與大象的和平共存，像「大象友善茶」這樣的組織會為那些採取預防措施以避免意外的茶園提供認證，例如填平溝渠、保留舊有廊道暢通。透過這些努力，該組織希望提升公眾對生態友善農法的認識。",
+        questions:[
+          { n:34, kind:"形容詞",
+            stem:"While such a trench is a small inconvenience to a grown elephant, it can be ______ to a calf that has never learned to navigate rough ground.",
+            options:{A:"compelling 引人入勝的、極具說服力的",B:"essential 不可或缺的",C:"hazardous 危險的",D:"delicate 脆弱精緻的"}, answer:"C",
+            translation:"對一頭成年象來說，這樣的溝渠只是個小小的不便，但對一隻從未學會如何走過崎嶇地面的小象而言，它可能是致命的危險。",
+            explain:{
+              A:"compelling 意為「引人入勝的、極具說服力的」，形容故事、論點或證據；一條排水溝不會引人入勝。",
+              B:"essential 意為「不可或缺的」，是正面的評價；但 While 引導的讓步子句說它對成年象只是 a small inconvenience（小小的不便），對小象則必須是更嚴重的負面後果。",
+              C:"hazardous 意為「危險的、有害的」。判斷依據是 While 的對比結構：a small inconvenience to a grown elephant（對成年象只是小不便）對比到小象身上必須升級為嚴重威脅；而關係子句 has never learned to navigate rough ground（從未學會走過崎嶇地面）與下一句 often slip in and cannot climb out（常滑進去又爬不出來）都在說明這個危險。",
+              D:"delicate 意為「脆弱精緻的」，形容的是容易受損的那一方；脆弱的是小象，不是溝渠本身。主詞 it 指的是 such a trench（溝渠），所以語意錯置。"
+            },
+            notes:[
+              {term:"hazardous", pos:"adj.", gloss:"危險的、有害的（hazardous waste 有害廢棄物／hazardous to health 有害健康）。n. hazard 危害、風險", ex:"Driving in fog is hazardous.", exZh:"在霧中開車很危險。"},
+              {term:"While 的讓步對比", pos:"技巧", gloss:"While 引導的子句與主要子句形成對比。先讀 While 子句的程度（a small inconvenience），主句就要填程度相反或更強的字。"}
+            ]},
+
+          { n:35, kind:"動詞",
+            stem:"Since elephants generally do not desert an injured companion, a whole herd may ______ beside a ditch for hours, waiting for a calf that cannot rise.",
+            options:{A:"arise 出現、發生",B:"withdraw 撤離、退出",C:"venture 冒險前往",D:"linger 徘徊不去、留連"}, answer:"D",
+            translation:"由於大象通常不會拋棄受傷的同伴，整個象群可能在溝邊徘徊數小時，等著一隻爬不起來的小象。",
+            explain:{
+              A:"arise 意為「出現、發生」，主詞多為問題或機會（Problems arise）；象群不是「出現在」溝邊，而是停留不走。",
+              B:"withdraw 意為「撤離、退出」，是離開的動作；但 Since 子句明說 do not desert an injured companion（不會拋棄受傷的同伴），牠們正是不肯離開。語意完全相反。",
+              C:"venture 意為「冒險前往」，強調的是進入險地的動作；但本句要表達的是抵達之後「待著不走」的狀態，而且 for hours（數小時）修飾的是持續的停留。",
+              D:"linger 意為「徘徊不去、留連」。三個線索：Since 子句的 do not desert an injured companion（不拋棄傷伴）說明不肯走、for hours（數小時）點出停留之久、而分詞構句 waiting for a calf that cannot rise（等著爬不起來的小象）則交代了原因。"
+            },
+            notes:[
+              {term:"linger", pos:"vi.", gloss:"徘徊不去、留連；也指氣味或感覺久久不散。112 學測閱讀 39-42 原文即為 a herd may linger at a trench", ex:"The crowd lingered after the concert.", exZh:"演唱會結束後人群仍留連不散。"},
+              {term:"desert", pos:"vt.", gloss:"拋棄、遺棄（desert one's family／post）。此義重音在後 de-SERT，與名詞「沙漠」DE-sert 不同。"}
+            ]},
+
+          { n:36, kind:"分詞構句",
+            stem:"With their ancient corridors ______ beneath neat rows of tea, the herds have no way around the plantations and must walk straight through them.",
+            options:{A:"burying（現在分詞，主動）",B:"buried（過去分詞，被動）",C:"having buried（完成式分詞，主動）",D:"were buried（限定動詞，不可用於附屬構句）"}, answer:"B",
+            translation:"隨著牠們古老的廊道被埋在整齊的茶樹行列之下，象群無法繞過這些茶園，只能直接穿越。",
+            explain:{
+              A:"現在分詞 burying 表主動，意思會變成「廊道埋了某物」；但廊道是被茶園覆蓋掉的那一方，應為被動。",
+              B:"這是 with + 受詞 + 補語 的獨立分詞構句。判斷主被動的方法是還原成子句：their ancient corridors are buried beneath neat rows of tea（古老廊道被埋在茶樹底下），廊道是被埋的對象，所以用過去分詞 buried。介系詞 beneath（在…之下）也印證這是被覆蓋的狀態。",
+              C:"having buried 是完成式的主動分詞，表示廊道「已經埋了某物」且動作更早發生；語態與語意都不合。",
+              D:"were buried 是限定動詞（有時態的動詞），不能用在 with 之後的附屬結構裡；with 後面只能接名詞加上非限定的補語（分詞、形容詞或介系詞片語）。"
+            },
+            notes:[
+              {term:"with + O + 補語", pos:"句型", gloss:"附帶狀況構句。補語可為現在分詞（主動）、過去分詞（被動）、形容詞或介系詞片語：with his eyes closed 閉著眼／with the engine running 引擎發動著", ex:"With the road blocked, we had to turn back.", exZh:"由於道路被封，我們只好折返。"},
+              {term:"corridor", pos:"n.", gloss:"走廊；（生態）廊道（a wildlife corridor 野生動物廊道）。本文指大象世代遷徙的通路"}
+            ]},
+
+          { n:37, kind:"轉折語",
+            stem:"Fences do little to deter an animal weighing several tons. ______ , they become obstacles to the villagers' escape.",
+            options:{A:"Instead 反而、取而代之",B:"Accordingly 因此、相應地",C:"Likewise 同樣地",D:"Meanwhile 同時"}, answer:"A",
+            translation:"圍籬對一頭重達數噸的動物幾乎毫無嚇阻作用。反而，它們成了村民逃生的障礙。",
+            explain:{
+              A:"Instead 意為「反而」，用於前句否定了某個預期功能、後句指出實際產生的相反效果。線索是前句的否定 do little to deter（幾乎無法嚇阻）——圍籬該擋的是大象卻擋不住，結果擋住的是 the villagers' escape（村民的逃生），功能完全錯置。這個「該有的沒有、不該有的卻出現」正是 Instead 的典型語境。",
+              B:"Accordingly 意為「因此、照著辦」，表示順理成章的結果；但圍籬擋不住大象並不會「因此」變成村民的障礙，兩者是功能上的反差而非因果推演。",
+              C:"Likewise 意為「同樣地」，用於前後方向一致時；但前句是「對大象沒用」、後句是「對村民有害」，一個是失效、一個是反效果，不是同類的累加。",
+              D:"Meanwhile 意為「同時、另一方面」，用於並列兩件同時發生的事；它無法呈現這裡「本該保護人卻害了人」的反轉語氣。這是本題最需要分辨的選項。"
+            },
+            notes:[
+              {term:"instead", pos:"adv.", gloss:"反而、取而代之（置句首加逗號）。前面通常有否定或落空的預期。對照 instead of ＋ N/V-ing。", ex:"The medicine didn't help. Instead, it made things worse.", exZh:"這個藥沒有幫助。反而讓情況更糟。"},
+              {term:"deter", pos:"vt.", gloss:"嚇阻、使卻步（deter sb from V-ing）。n. deterrent 嚇阻物、威懾力量"}
+            ]},
+
+          { n:38, kind:"名詞",
+            stem:"Organizations like Elephant Friendly Tea certify gardens that take ______ against accidents, such as filling trenches and leaving old corridors open.",
+            options:{A:"exceptions 例外",B:"precautions 預防措施",C:"revenge 報復",D:"obligations 義務"}, answer:"B",
+            translation:"像「大象友善茶」這樣的組織會為那些採取預防措施以避免意外的茶園提供認證，例如填平溝渠、保留舊有廊道暢通。",
+            explain:{
+              A:"exception 意為「例外」，固定搭配是 make an exception（破例）而非 take exceptions against；而且認證的標準是看茶園有沒有做事，不是看它有沒有例外。",
+              B:"take precautions against sth 是固定搭配，意為「採取預防措施以防範某事」。兩個線索：介系詞 against（防範）與 such as 之後的具體做法 filling trenches and leaving old corridors open（填平溝渠、保留廊道暢通），這些都是事前防範而非事後補救。",
+              C:"revenge 意為「報復」，搭配是 take revenge on sb（向某人報復）；茶園不會對意外進行報復，語意荒謬。",
+              D:"obligation 意為「義務」，搭配是 fulfill／meet an obligation（履行義務）；take obligations against 不成片語，而且本句強調的是主動防範而非被動履責。"
+            },
+            notes:[
+              {term:"take precautions against", pos:"phr.", gloss:"採取預防措施防範…（adj. precautionary 預防性的；as a precaution 以防萬一）", ex:"Take precautions against mosquito bites.", exZh:"請採取預防措施避免蚊蟲叮咬。"},
+              {term:"take + 名詞 的固定搭配", pos:"整理", gloss:"take precautions 採取預防／take measures 採取措施／take steps 採取步驟／take action 採取行動／take the initiative 採取主動。against 專屬於 precautions。"}
+            ]}
+        ]
+      }
+    ]
+  },
+
+  {
+    id:"fla", label:"三、文意選填（第一篇）", score:"8% · 每題 1%",
+    instruction:"改寫自 113 學測閱讀測驗 39-42（Thomas Moran 與黃石公園）。請忽略選項大小寫。答案：39 (AB)　40 C　41 E　42 D　43 B　44 (AD)　45 (AC)　46 A",
+    bank:{A:"document 記錄、記載（動詞）",B:"presented 呈交、提出",C:"appointed 任命、指派",D:"expedition 遠征、探勘隊",E:"territory 疆域、領地",AB:"absence 缺乏、不存在",AC:"established 設立、確立",AD:"dismissed 把…視為不值一顧"},
+    bankWide:true,
+    groups:[{
+      passage:"Imagine growing up in a place where nature was hidden behind polluted rivers and smoke-filled skies. This was the childhood experience of Thomas Moran, who was born in northwest England during the grim age of the Industrial Revolution. Ironically, the __39__ of natural beauty inspired him to become one of America's most influential landscape painters and helped set the stage for the creation of national parks.\n\nMoran's family immigrated to Philadelphia when he was seven. Inspired by the British master J.M.W. Turner, Moran began painting at fifteen and soon displayed remarkable talent. He quickly rose to prominence, and by age 34, he was __40__ chief illustrator of Scribner's Monthly. A turning point in his career came in 1871 when he was asked to illustrate an article about the Yellowstone region. The author's descriptions of the region's mysterious landscapes captivated Moran, making him eager to explore this unfamiliar __41__ himself.\n\nLater that year, Moran joined the first official government __42__ to Yellowstone with photographer William Henry Jackson. The journey had a profound impact on Moran's artistic career. For two weeks, Moran worked tirelessly, capturing the beauty and power of the wilderness through detailed sketches. Upon their return, the survey team __43__ their findings, including Moran's vibrant watercolors, Jackson's photographs, and the survey results, to the U.S. Congress.\n\nAt that time, many people had __44__ Yellowstone as a harsh, hellish wilderness. However, Moran's artwork revealed the true splendor of the landscape and fired the imagination of lawmakers. In March 1872, Congress __45__ Yellowstone as the world's first national park. Throughout the rest of his life, Moran continued to __46__ the American West, inspiring the protection of a dozen other areas that are now celebrated as national parks or national monuments.",
+      zh:"想像一下在一個自然被污濁河流與濃煙瀰漫的天空所遮蔽的地方長大。這就是湯瑪斯．莫蘭的童年經驗，他出生於工業革命那個陰鬱年代的英格蘭西北部。諷刺的是，正是自然之美的匱乏激勵他成為美國最具影響力的風景畫家之一，並協助為國家公園的誕生奠下基礎。\n\n莫蘭七歲時全家移民到費城。受到英國大師透納的啟發，莫蘭十五歲開始作畫，很快就展現出非凡的才華。他迅速崛起，到三十四歲時已被任命為《斯克里布納月刊》的首席插畫家。他生涯的轉折點出現在一八七一年，當時他受託為一篇關於黃石地區的文章繪製插圖。作者對該地區神秘地景的描述深深吸引了莫蘭，使他渴望親自去探索這片陌生的疆域。\n\n那年稍晚，莫蘭與攝影師威廉．亨利．傑克森一同加入了政府首次的官方黃石探勘隊。這趟旅程對莫蘭的藝術生涯產生了深遠的影響。整整兩週，莫蘭不辭辛勞地工作，透過細膩的素描捕捉這片荒野的美麗與力量。返回之後，探勘團隊把他們的發現呈交給美國國會，其中包括莫蘭色彩鮮明的水彩畫、傑克森的照片，以及勘查結果。\n\n在那個時候，許多人把黃石視為一片嚴酷而如地獄般的荒野、不值一顧。然而莫蘭的作品揭示了這片地景真正的壯麗，點燃了立法者的想像。一八七二年三月，國會將黃石設立為世界第一座國家公園。在他餘生之中，莫蘭持續記錄美國西部，促成了另外十餘個地區受到保護，那些地方如今都被譽為國家公園或國家紀念區。",
+      questions:[
+        { n:39, kind:"名詞", answer:"AB", answerText:"absence 缺乏、不存在",
+          stem:"Ironically, the ______ of natural beauty inspired him to become one of America's most influential landscape painters.",
+          translation:"諷刺的是，正是自然之美的匱乏激勵他成為美國最具影響力的風景畫家之一。",
+          why:"空格前有定冠詞 the、後有 of，要填名詞。關鍵線索是副詞 Ironically（諷刺的是）——它要求前後形成反差：第一段說他的童年 nature was hidden behind polluted rivers and smoke-filled skies（自然被污濁河流與濃煙遮蔽），也就是看不到美景；而結果他卻成了風景畫家。缺少什麼反而造就什麼，這個反差正是 absence（匱乏）撐起來的。",
+          notes:[{term:"absence", pos:"n.", gloss:"缺乏、不存在；缺席（in the absence of sth 在缺乏…的情況下）。adj. absent", ex:"In the absence of evidence, the case was dropped.", exZh:"由於缺乏證據，此案被撤銷。"},
+            {term:"Ironically 是反差訊號", pos:"技巧", gloss:"看到 Ironically，就要找與預期相反的內容。預期是「看多了美景才會畫風景」，所以空格要填相反的「看不到美景」。"}]},
+
+        { n:40, kind:"過去分詞", answer:"C", answerText:"appointed 任命、指派",
+          stem:"He quickly rose to prominence, and by age 34, he was ______ chief illustrator of Scribner's Monthly.",
+          translation:"他迅速崛起，到三十四歲時已被任命為《斯克里布納月刊》的首席插畫家。",
+          why:"空格在 be 動詞 was 之後，後面接職稱 chief illustrator，所以要填能構成被動並接職位補語的過去分詞。appoint sb (as) + 職位 意為「任命某人擔任某職」，被動即 be appointed + 職位。語意上，前半句 rose to prominence（迅速崛起）正好鋪陳他獲得這個職位的原因。",
+          notes:[{term:"appoint sb (as) + 職位", pos:"句型", gloss:"任命某人為…。被動 be appointed (as) sth，職位前通常不加冠詞。n. appointment 任命、約診", ex:"She was appointed head of the department.", exZh:"她被任命為系主任。"},
+            {term:"rise to prominence", pos:"phr.", gloss:"崛起、成名（n. prominence 顯著、傑出；adj. prominent）"}]},
+
+        { n:41, kind:"名詞", answer:"E", answerText:"territory 疆域、領地",
+          stem:"The author's descriptions of the region's mysterious landscapes captivated Moran, making him eager to explore this unfamiliar ______ himself.",
+          translation:"作者對該地區神秘地景的描述深深吸引了莫蘭，使他渴望親自去探索這片陌生的疆域。",
+          why:"空格前有指示詞與形容詞 this unfamiliar，要填單數名詞。語意上，受詞必須是可以被 explore（探索）的一片土地，而 this 指回前面的 the Yellowstone region（黃石地區）。territory 意為「疆域、領地」，正好概括這片陌生的廣大地域。",
+          notes:[{term:"territory", pos:"n.", gloss:"疆域、領地；（引申）領域、範疇（uncharted territory 未知的領域）。adj. territorial", ex:"The expedition entered uncharted territory.", exZh:"這支探勘隊進入了未測繪過的疆域。"},
+            {term:"captivate", pos:"vt.", gloss:"深深吸引、使著迷（adj. captivating 迷人的）。113 學測原文即用 Captivated by the utterly fantastic sights"}]},
+
+        { n:42, kind:"名詞", answer:"D", answerText:"expedition 遠征、探勘隊",
+          stem:"Later that year, Moran joined the first official government ______ to Yellowstone with photographer William Henry Jackson.",
+          translation:"那年稍晚，莫蘭與攝影師威廉．亨利．傑克森一同加入了政府首次的官方黃石探勘隊。",
+          why:"空格前有一串修飾語 the first official government，後面接介系詞 to ＋ 地點，所以要填名詞。動詞 joined（加入）的受詞必須是一個團隊或行動，而 to Yellowstone（前往黃石）指明了目的地。expedition 意為「遠征、探勘行動（隊）」，正是這種有組織的科學考察。下一段的 the survey team（勘查團隊）也呼應了這個字。",
+          notes:[{term:"expedition", pos:"n.", gloss:"遠征、探勘行動（go on／join an expedition；a scientific／polar expedition）", ex:"He joined an expedition to Antarctica.", exZh:"他加入了一支南極探勘隊。"},
+            {term:"看介系詞定名詞", pos:"技巧", gloss:"空格後是 to ＋ 地點，表示這個名詞帶有「前往某地」的方向性。expedition／journey／trip 都符合，但只有 expedition 能被 official government 修飾。"}]},
+
+        { n:43, kind:"動詞", answer:"B", answerText:"presented 呈交、提出",
+          stem:"Upon their return, the survey team ______ their findings, including Moran's vibrant watercolors, Jackson's photographs, and the survey results, to the U.S. Congress.",
+          translation:"返回之後，探勘團隊把他們的發現呈交給美國國會，其中包括莫蘭色彩鮮明的水彩畫、傑克森的照片，以及勘查結果。",
+          why:"主詞是 the survey team，空格要填過去式的及物動詞，而句尾有 to the U.S. Congress（給美國國會）。present A to B 意為「把 A 呈交給 B」，正好吻合這個雙受詞結構。語意上，受詞 their findings（他們的發現）加上三項具體成果，都是要交給國會審閱的材料。",
+          notes:[{term:"present A to B", pos:"phr.", gloss:"把 A 呈交／提出給 B（present findings／a report／an award to sb）。n. presentation", ex:"The team presented its report to the committee.", exZh:"這個團隊把報告呈交給委員會。"},
+            {term:"Upon + N/V-ing", pos:"phr.", gloss:"一…就…（Upon their return ＝ 他們一回來）。等於 As soon as they returned。"}]},
+
+        { n:44, kind:"過去分詞", answer:"AD", answerText:"dismissed 把…視為不值一顧",
+          stem:"At that time, many people had ______ Yellowstone as a harsh, hellish wilderness. However, Moran's artwork revealed the true splendor of the landscape.",
+          translation:"在那個時候，許多人把黃石視為一片嚴酷而如地獄般的荒野、不值一顧。然而莫蘭的作品揭示了這片地景真正的壯麗。",
+          why:"空格前有助動詞 had，要填過去分詞構成過去完成式。關鍵結構是 as：dismiss A as B 意為「把 A 當成 B 而不予重視」。語意上，However 之後 revealed the true splendor（揭示了真正的壯麗）形成強烈轉折，說明之前大眾的看法是輕視而錯誤的；而 a harsh, hellish wilderness（嚴酷如地獄的荒野）正是那個被貶低的評價。",
+          notes:[{term:"dismiss A as B", pos:"句型", gloss:"把 A 當成 B 而不予一顧（dismiss the idea as nonsense 把這想法當胡說而駁回）。本卷第一大題與 L2+L3 評量都考過 dismiss", ex:"Critics dismissed the film as shallow.", exZh:"評論家把這部電影貶為淺薄之作。"},
+            {term:"過去完成式的作用", pos:"文法", gloss:"had dismissed 表示這個看法早於 Moran 的作品問世，為 However 的翻轉做好時序鋪排。"}]},
+
+        { n:45, kind:"動詞", answer:"AC", answerText:"established 設立、確立",
+          stem:"In March 1872, Congress ______ Yellowstone as the world's first national park.",
+          translation:"一八七二年三月，國會將黃石設立為世界第一座國家公園。",
+          why:"主詞是 Congress（國會），空格要填過去式及物動詞，後面同樣有 as ＋ 名詞的補語結構。establish A as B 意為「把 A 設立／確立為 B」。語意上，國會的職權就是立法設立，而 the world's first national park（世界第一座國家公園）正是被確立的身分。這也與第一段的 helped set the stage for the creation of national parks（為國家公園的誕生奠基）首尾呼應。",
+          notes:[{term:"establish A as B", pos:"句型", gloss:"把 A 設立／確立為 B。n. establishment 設立、機構；adj. established 已確立的", ex:"The ruling established him as a legal expert.", exZh:"這項判決確立了他法律專家的地位。"},
+            {term:"同樣用 as 的兩題", pos:"對照", gloss:"第 44 題 dismiss A as B 與第 45 題 establish A as B 都靠 as 判斷結構，但一個是貶低、一個是確立，語意正反。"}]},
+
+        { n:46, kind:"動詞", answer:"A", answerText:"document 記錄、記載",
+          stem:"Throughout the rest of his life, Moran continued to ______ the American West, inspiring the protection of a dozen other areas.",
+          translation:"在他餘生之中，莫蘭持續記錄美國西部，促成了另外十餘個地區受到保護。",
+          why:"空格在 continued to 之後，要填原形動詞，受詞是 the American West。bank 中剩下的動詞只有 document，而它當動詞意為「記錄、以作品記載」，正好對應一位畫家用畫筆記錄西部地景的工作。分詞構句 inspiring the protection of a dozen other areas（促成另外十餘個地區受到保護）也說明他的記錄發揮了實際影響。",
+          notes:[{term:"document", pos:"vt. / n.", gloss:"vt. 記錄、以文字或影像記載（document a journey／social change）；n. 文件。adj. documentary；n. 紀錄片", ex:"She documented the whole trip in photographs.", exZh:"她用照片記錄了整趟旅程。"},
+            {term:"名詞當動詞", pos:"技巧", gloss:"document 平常當名詞「文件」，這裡當動詞「記錄」。文意選填常考這種詞性轉換，看空格前的 to 或助動詞就能判斷要填動詞。"}]}
+      ]
+    }]
+  },
+
+  {
+    id:"flb", label:"三、文意選填（第二篇）", score:"8% · 每題 1%",
+    instruction:"檳城喬治市的歷史與文化混融。請忽略選項大小寫。答案：47 B　48 (AB)　49 (AC)　50 A　51 E　52 C　53 (AD)　54 D",
+    bank:{A:"inherited 承繼、繼承",B:"acquired 取得、獲得",C:"evolving 不斷演變的",D:"search 尋找（in search of）",E:"match 比得上、匹敵",AB:"passing 路過的、經過的",AC:"ties 聯繫、紐帶",AD:"works 作品"},
+    bankWide:true,
+    groups:[{
+      passage:"Penang has a long and fascinating history. In 1786, British Captain Francis Light __47__ this island on behalf of the British East India Company. When he raised the British flag over Penang then, he imagined a harbor, a sheltered anchorage at the northern entrance of the Strait of Malacca, where ships could stop, make repairs, and trade without paying duties. Almost everything the city later became grew out of that one commercial decision.\n\nThe sea did the rest. The free port attracted __48__ ships from Sumatra, Siam, Canton, and Madras, and many people aboard them never went home. Chinese carpenters, Indian moneylenders, Arab spice merchants, and Malay boatmen settled along the shore, organizing themselves around family and clan __49__ rather than around any plan drawn up in Britain. Villages rose on wooden stilts above the water, close enough to the harbor to catch the first cargo of the morning.\n\nTheir descendants __50__ a way of life born from generations of borrowing. A single shophouse might combine Chinese shutters, European arches, Malay woodwork, and Portuguese floor tiles without anyone finding the combination strange. The same habit shaped the city's kitchens: a bowl of Penang laksa contains sour tamarind from Malay cooking, noodles from China, and chilies from the Americas. Few cities of comparable size can __51__ this density of influences.\n\nThe process has not stopped. Since 2008, when UNESCO recognized the old town, George Town has become as much a(n) __52__ canvas as a preserved one. Its most photographed sights today are not colonial doorways but a series of murals, the __53__ of a Lithuanian artist who spent one summer painting on shophouse walls, images now as local as anything around them.\n\nYet the same recognition that draws visitors also lifts rents. Long-settled families sell to developers, and young people leave for Kuala Lumpur in __54__ of higher wages. A city that grew because strangers chose to stay may now be reshaped by residents who choose to go.",
+      zh:"檳城有一段漫長而引人入勝的歷史。一七八六年，英國船長法蘭西斯．萊特代表英國東印度公司取得了這座島嶼。當時他在檳城升起英國國旗，心中想像的是一座港口——麻六甲海峽北端一處有遮蔽的泊地，船隻可以在此停靠、修補、並免稅貿易。這座城市後來成為的幾乎一切，都是從那一個商業決定長出來的。\n\n剩下的就由海洋完成。這座自由港吸引了來自蘇門答臘、暹羅、廣州與馬德拉斯的路過船隻，而船上許多人再也沒有回家。華人木匠、印度錢莊業者、阿拉伯香料商與馬來船夫沿著海岸定居下來，依著家族與宗親的聯繫而非任何在英國擬定的計畫來組織自己。村落建在水面上的木樁之上，離港口近得足以搶到清晨第一批貨。\n\n他們的後代承繼了一種從世代相互借用中誕生的生活方式。一間店屋可能同時結合華人的百葉窗、歐式拱門、馬來木作與葡萄牙地磚，而沒有人覺得這樣的組合奇怪。同樣的習性也形塑了這座城市的廚房：一碗檳城叻沙裡有來自馬來料理的酸羅望子、來自中國的麵，以及來自美洲的辣椒。很少有同等規模的城市能比得上這種影響交融的密度。\n\n這個過程並未停止。自二○○八年聯合國教科文組織認定這座老城以來，喬治市已經成為一塊既被保存、同時也仍在不斷演變的畫布。今天它最常被拍攝的景點不是殖民時期的門廊，而是一系列壁畫，那是一位立陶宛藝術家的作品，他花了一個夏天在店屋牆上作畫，那些圖像如今已和周遭的一切同樣在地。\n\n然而，同一份為它帶來遊客的認定，也推高了租金。長年定居的家族把房子賣給開發商，年輕人則為了尋求更高的工資而前往吉隆坡。一座因為陌生人選擇留下而成長的城市，如今可能被選擇離開的居民重新塑造。",
+      questions:[
+        { n:47, kind:"動詞", answer:"B", answerText:"acquired 取得、獲得",
+          stem:"In 1786, British Captain Francis Light ______ this island on behalf of the British East India Company.",
+          translation:"一七八六年，英國船長法蘭西斯．萊特代表英國東印度公司取得了這座島嶼。",
+          why:"主詞是人、受詞是 this island，空格要填過去式及物動詞。acquire 意為「取得、獲得（土地、財產、技能）」，是正式用語。語意上，on behalf of the British East India Company（代表英國東印度公司）說明這是一次代理機構進行的佔有行動，而下一句 raised the British flag over Penang（在檳城升起英國國旗）正是取得主權的象徵動作。",
+          notes:[{term:"acquire", pos:"vt.", gloss:"取得、獲得（acquire land／a company／a skill／a reputation）。n. acquisition", ex:"The firm acquired three rival brands.", exZh:"這家公司收購了三個競爭品牌。"},
+            {term:"on behalf of", pos:"phr.", gloss:"代表…（on behalf of sb／on sb's behalf）。113 學測綜合測驗也考過這個片語"}]},
+
+        { n:48, kind:"形容詞", answer:"AB", answerText:"passing 路過的、經過的",
+          stem:"The free port attracted ______ ships from Sumatra, Siam, Canton, and Madras, and many people aboard them never went home.",
+          translation:"這座自由港吸引了來自蘇門答臘、暹羅、廣州與馬德拉斯的路過船隻。",
+          why:"空格在動詞 attracted 與名詞 ships 之間，要填形容詞。語意上，這些船來自四個不同的遠方港口，是在海上航行途中被自由港吸引而停靠的，所以是「路過的」。passing 當形容詞意為「路過的、經過的」。上一段的 where ships could stop, make repairs, and trade（船隻可在此停靠、修補、貿易）也印證它們是中途停留而非終點。",
+          notes:[{term:"passing", pos:"adj.", gloss:"路過的、經過的（a passing ship／car／stranger）；也指「短暫的」（a passing interest 一時的興趣）", ex:"A passing driver stopped to help.", exZh:"一位路過的駕駛停車幫忙。"},
+            {term:"aboard", pos:"prep. / adv.", gloss:"在（船、飛機、車）上（people aboard them 船上的人）。對照 abroad 在國外，拼法相近意思完全不同。"}]},
+
+        { n:49, kind:"名詞", answer:"AC", answerText:"ties 聯繫、紐帶",
+          stem:"Chinese carpenters, Indian moneylenders, Arab spice merchants, and Malay boatmen settled along the shore, organizing themselves around family and clan ______ rather than around any plan drawn up in Britain.",
+          translation:"華人木匠、印度錢莊業者、阿拉伯香料商與馬來船夫沿著海岸定居下來，依著家族與宗親的聯繫而非任何在英國擬定的計畫來組織自己。",
+          why:"空格前有 family and clan（家族與宗親）兩個名詞當修飾語，要填名詞。結構線索是 rather than 的對比：一邊是 family and clan ______（家族與宗親的某種東西），另一邊是 any plan drawn up in Britain（在英國擬定的計畫）——自發的人際紐帶對上外來的行政規劃。ties 意為「聯繫、紐帶」，正是這種血緣與鄉誼的連結。",
+          notes:[{term:"ties", pos:"n.", gloss:"聯繫、紐帶（family／blood／close／cultural ties）。常搭配動詞 forge／strengthen／sever ties", ex:"The two nations have strong trade ties.", exZh:"兩國有緊密的貿易聯繫。"},
+            {term:"rather than 的對比", pos:"技巧", gloss:"rather than 前後必須是同類且對立的成分。後面是 any plan（計畫），前面就要填一個與「計畫」相對的名詞，也就是自然形成的連結。"}]},
+
+        { n:50, kind:"動詞", answer:"A", answerText:"inherited 承繼、繼承",
+          stem:"Their descendants ______ a way of life born from generations of borrowing.",
+          translation:"他們的後代承繼了一種從世代相互借用中誕生的生活方式。",
+          why:"主詞是 Their descendants（他們的後代），空格要填過去式及物動詞，受詞是 a way of life。inherit 意為「繼承、承繼」，受詞可以是財產也可以是傳統或特質。兩個線索：主詞是「後代」，天然就是承接上一代的人；而 born from generations of borrowing（從世代相互借用中誕生）更強調這是跨世代傳下來的東西。",
+          notes:[{term:"inherit", pos:"vt.", gloss:"繼承（inherit property／a tradition／a gene）。n. inheritance 遺產、繼承；adj. inherited 遺傳的、承繼的", ex:"She inherited her mother's patience.", exZh:"她承繼了母親的耐性。"},
+            {term:"acquire vs. inherit", pos:"對照", gloss:"第 47 題的 acquire 是「自己取得」，本題的 inherit 是「從前人承繼」。兩個字都在這篇文章裡，正好對照：第一代取得，後代承繼。"}]},
+
+        { n:51, kind:"動詞", answer:"E", answerText:"match 比得上、匹敵",
+          stem:"Few cities of comparable size can ______ this density of influences.",
+          translation:"很少有同等規模的城市能比得上這種影響交融的密度。",
+          why:"空格在助動詞 can 之後，要填原形動詞，受詞是 this density of influences。match 當動詞意為「比得上、匹敵」。線索是主詞的否定限定詞 Few（很少有）與 of comparable size（同等規模的）——這是一個比較的語境，而前文列舉了華、歐、馬來、葡萄牙、美洲等多重影響，正是在誇耀檳城的混融程度無人能及。",
+          notes:[{term:"match", pos:"vt.", gloss:"比得上、匹敵（No one can match her skill.）；也指「相符、搭配」。113 學測綜合測驗考過 cannot match the personal attention", ex:"Few restaurants can match this view.", exZh:"很少有餐廳比得上這片景色。"},
+            {term:"Few + 複數名詞", pos:"用法", gloss:"Few 本身帶否定意味（幾乎沒有）。Few cities can match X ＝ X 幾乎無可匹敵，是一種誇讚的說法。"}]},
+
+        { n:52, kind:"形容詞", answer:"C", answerText:"evolving 不斷演變的",
+          stem:"Since 2008, when UNESCO recognized the old town, George Town has become as much a(n) ______ canvas as a preserved one.",
+          translation:"自二○○八年聯合國教科文組織認定這座老城以來，喬治市已經成為一塊既被保存、同時也仍在不斷演變的畫布。",
+          why:"空格在冠詞與名詞 canvas 之間，要填形容詞。關鍵是 as much A as B 的句型，它表示「既是 A 也同樣是 B」，所以空格必須與 preserved（被保存的）形成並列對照。evolving 意為「不斷演變的」，與「保存」構成一組張力：老城被保留下來，卻同時仍在長出新東西；而下一段的壁畫正是這個「演變」的例證。",
+          notes:[{term:"as much A as B", pos:"句型", gloss:"既是 A 也同樣是 B（強調兩者兼具）。as much a teacher as a researcher ＝ 既是教師也是研究者。", ex:"It is as much a warning as an invitation.", exZh:"那既是一份邀請，也同樣是一個警告。"},
+            {term:"evolving", pos:"adj.", gloss:"不斷演變的（an evolving situation／language）。v. evolve；n. evolution"}]},
+
+        { n:53, kind:"名詞", answer:"AD", answerText:"works 作品",
+          stem:"Its most photographed sights today are not colonial doorways but a series of murals, the ______ of a Lithuanian artist who spent one summer painting on shophouse walls.",
+          translation:"今天它最常被拍攝的景點不是殖民時期的門廊，而是一系列壁畫，那是一位立陶宛藝術家的作品。",
+          why:"空格前有定冠詞 the、後有 of ＋ 人，而整個片語是前面 a series of murals（一系列壁畫）的同位語，用來補充說明這些壁畫是什麼。works 意為「（藝術）作品」，the works of + 藝術家 是標準說法。注意此義恆用複數，對應前面的 a series（一系列）。",
+          notes:[{term:"works", pos:"n.", gloss:"（藝術、文學）作品（the works of Shakespeare／a work of art 一件藝術品）。此義可數，複數指多件作品", ex:"The museum displays the works of local artists.", exZh:"這座美術館展出當地藝術家的作品。"},
+            {term:"同位語", pos:"文法", gloss:"逗號之後的名詞片語用來補充說明前面的名詞。a series of murals, the works of a Lithuanian artist ＝ 這些壁畫就是那位藝術家的作品。"}]},
+
+        { n:54, kind:"名詞", answer:"D", answerText:"search 尋找（in search of）",
+          stem:"Long-settled families sell to developers, and young people leave for Kuala Lumpur in ______ of higher wages.",
+          translation:"長年定居的家族把房子賣給開發商，年輕人則為了尋求更高的工資而前往吉隆坡。",
+          why:"空格前有介系詞 in、後有 of，要填名詞構成固定片語。in search of sth 意為「為了尋找、追求某物」。語意上，young people leave for Kuala Lumpur（年輕人前往吉隆坡）是行動，higher wages（更高的工資）是目的，正好由這個片語串起來。",
+          notes:[{term:"in search of", pos:"phr.", gloss:"為了尋找、追求（in search of work／a better life）。注意 search 不加冠詞也不加 s", ex:"They moved south in search of warmer weather.", exZh:"他們為了尋找較溫暖的天氣而南遷。"},
+            {term:"in + N + of 的固定片語", pos:"整理", gloss:"in search of 尋找／in favor of 支持／in need of 需要／in spite of 儘管／in place of 代替。這類片語中間的名詞不加冠詞。"}]}
+      ]
+    }]
+  },
+
+  {
+    id:"st", label:"四、篇章結構", score:"8% · 每題 2%",
+    instruction:"德國高速公路（Autobahn）與汽車工業。答案：55 B　56 A　57 C　58 E　（未使用：D）",
+    bank:{A:"This high degree of driving freedom was made possible by substantial investments in infrastructure.　這種高度的駕駛自由，是靠著對基礎建設的大量投資才得以實現。",B:"This policy has reinforced Germany's reputation for automotive engineering and supported a vibrant motorsport scene.　這項政策強化了德國在汽車工程上的聲譽，也支撐了蓬勃的賽車運動風氣。",C:"The opportunity to drive at high speeds turned the Autobahn into a demanding testing ground for automobile manufacturers.　高速行駛的機會把高速公路變成了汽車製造商嚴苛的試驗場。",D:"As an engineering feat, the Autobahn reflects Germany's commitment to prioritizing AI-assisted monitoring system.　作為一項工程成就，高速公路反映了德國優先推動 AI 輔助監測系統的決心。（干擾選項）",E:"The Autobahn, ultimately, is not just a network of highways, but a symbol of Germany's engineering excellence and driving culture.　說到底，高速公路不只是一個公路網，而是德國工程卓越與駕駛文化的象徵。"},
+    bankWide:true,
+    groups:[{
+      passage:"Around the world, modern traffic management is increasingly relying on automated enforcement and AI-assisted monitoring to discourage speeding. While many nations impose strict speed limits on their highways, Germany offers a striking contrast through its Autobahn network. On many sections of these highways, there is no permanent speed limit. __55__\n\nThe origins of this driving culture can be traced back to the mid-twentieth century. During the postwar reconstruction, West Germany rebuilt and expanded the Autobahn network as part of its economic recovery. The highways were viewed not only as a vital transportation network but also as a symbol of mobility and national progress. Rather than introducing a nationwide speed limit, Germany chose to leave many sections unrestricted. __56__ German authorities built well-engineered highways, maintained them regularly, and complemented these efforts with rigorous driver-training programs. As a result, the Autobahn developed into a safe environment for high-speed travel rather than a dangerous free-for-all.\n\nThese conditions also transformed Germany's automobile industry. __57__ To ensure safety at speeds exceeding 200 km/h, engineers at companies such as Porsche, BMW, and Mercedes-Benz refined vehicle aerodynamics, handling, and braking systems. As German cars gained an international reputation for quality and performance, high-performance engineering became an important part of the country's national identity and inspired widespread enthusiasm for motorsport. This culture also produced internationally renowned racing drivers, such as Michael Schumacher, and established Germany as a dominant force in global motorsport.\n\n__58__ While growing concerns about road safety, environmental protection, and new transportation technologies continue to fuel debates over speed limits, the Autobahn remains closely connected to Germany's automotive heritage. It demonstrates how a unique transportation policy, coupled with strong engineering standards and responsible driving practices, can shape a country's identity in the global automotive world.",
+      zh:"世界各地的現代交通管理，越來越倚賴自動化執法與 AI 輔助監測來抑制超速。雖然許多國家對其高速公路實施嚴格的速限，德國卻透過它的 Autobahn 公路網呈現出鮮明的對比。在這些公路的許多路段上，並沒有永久性的速限。這項政策強化了德國在汽車工程上的聲譽，也支撐了蓬勃的賽車運動風氣。\n\n這種駕駛文化的起源可以追溯到二十世紀中葉。在戰後重建期間，西德把 Autobahn 公路網的重建與擴張當作經濟復甦的一部分。這些公路不僅被視為重要的運輸網絡，也被視為機動性與國家進步的象徵。德國沒有引入全國性的速限，而是選擇讓許多路段不受限制。這種高度的駕駛自由，是靠著對基礎建設的大量投資才得以實現。德國當局建造了工程品質優良的公路、定期維護，並以嚴格的駕駛訓練計畫相輔相成。結果，Autobahn 發展成一個適合高速行駛的安全環境，而不是危險的亂無秩序。\n\n這些條件也改造了德國的汽車工業。高速行駛的機會把 Autobahn 變成了汽車製造商嚴苛的試驗場。為了確保在時速超過兩百公里下的安全，保時捷、BMW 與賓士等公司的工程師精進了車輛的空氣力學、操控與煞車系統。隨著德國車在品質與性能上贏得國際聲譽，高性能工程成為這個國家國族認同的重要部分，也激起了對賽車運動的廣泛熱情。這種文化還培育出國際知名的賽車手，例如麥可．舒馬克，並使德國成為全球賽車運動的主導力量。\n\n說到底，Autobahn 不只是一個公路網，而是德國工程卓越與駕駛文化的象徵。雖然對道路安全、環境保護與新運輸科技日益升高的關切，持續激起關於速限的辯論，Autobahn 仍與德國的汽車傳統緊密相連。它展現了一項獨特的運輸政策，在強大的工程標準與負責任的駕駛習慣相配合之下，如何形塑一個國家在全球汽車世界中的身分。",
+      questions:[
+        { n:55, kind:"段末句 (2%)", answer:"B", answerText:"(B) This policy has reinforced Germany's reputation for automotive engineering and supported a vibrant motorsport scene.",
+          stem:"...Germany offers a striking contrast through its Autobahn network. On many sections of these highways, there is no permanent speed limit. ______\n\n（下一段開頭：The origins of this driving culture can be traced back to the mid-twentieth century.）",
+          translation:"這項政策強化了德國在汽車工程上的聲譽，也支撐了蓬勃的賽車運動風氣。",
+          why:"空格前一句是 there is no permanent speed limit（沒有永久速限），這正是一項「政策」，所以 (B) 開頭的 This policy 有明確的指代對象。更關鍵的是它與下文的銜接：(B) 同時提到 automotive engineering（汽車工程）與 motorsport scene（賽車運動風氣），而這兩條線索正好預告了後面第三段談汽車工業、以及舒馬克與賽車運動的內容，是典型的首段總綱句。另外 (B) 也呼應第一段的 driving culture（駕駛文化），讓下一段的 this driving culture 有所承接。",
+          notes:[
+            {term:"This / These + 名詞", pos:"技巧", gloss:"篇章結構最有效的線索就是指示詞。先問「This policy 指的是哪一句」，再確認那一句就在空格正前方。"},
+            {term:"段末句的預告功能", pos:"技巧", gloss:"第一段結尾常是全文的總綱，會埋下後面各段要展開的關鍵詞。本題的 engineering 與 motorsport 就分別對應第三段的兩個重點。"}
+          ]},
+
+        { n:56, kind:"段中句 (2%)", answer:"A", answerText:"(A) This high degree of driving freedom was made possible by substantial investments in infrastructure.",
+          stem:"Rather than introducing a nationwide speed limit, Germany chose to leave many sections unrestricted. ______ German authorities built well-engineered highways, maintained them regularly, and complemented these efforts with rigorous driver-training programs.",
+          translation:"這種高度的駕駛自由，是靠著對基礎建設的大量投資才得以實現。",
+          why:"這題要前後都對得上。往前看：前一句 chose to leave many sections unrestricted（選擇讓許多路段不受限制）正是 (A) 所說的 This high degree of driving freedom（這種高度的駕駛自由）。往後看：(A) 的後半 substantial investments in infrastructure（對基礎建設的大量投資）是一個概括說法，而緊接著的 built well-engineered highways, maintained them regularly（建造優良公路、定期維護）就是這筆投資的具體內容。前有指代、後有展開，位置完全吻合。",
+          notes:[
+            {term:"概括句接具體句", pos:"技巧", gloss:"英文段落常是「先總說、再分述」。若空格後出現一串具體作法，空格就要填概括那串作法的句子。"},
+            {term:"infrastructure", pos:"n.", gloss:"基礎建設（公路、橋梁、電網等）。本句的 well-engineered highways 與 driver-training programs 都屬於它的範圍。"}
+          ]},
+
+        { n:57, kind:"段中句 (2%)", answer:"C", answerText:"(C) The opportunity to drive at high speeds turned the Autobahn into a demanding testing ground for automobile manufacturers.",
+          stem:"These conditions also transformed Germany's automobile industry. ______ To ensure safety at speeds exceeding 200 km/h, engineers at companies such as Porsche, BMW, and Mercedes-Benz refined vehicle aerodynamics, handling, and braking systems.",
+          translation:"高速行駛的機會把高速公路變成了汽車製造商嚴苛的試驗場。",
+          why:"段首句說 transformed Germany's automobile industry（改造了德國汽車工業），空格必須承接這個主題並引出下一句。(C) 的關鍵詞 automobile manufacturers（汽車製造商）與 testing ground（試驗場）同時做到兩件事：往前接上「汽車工業」這個主題，往後則由 engineers at Porsche, BMW, and Mercedes-Benz refined vehicle aerodynamics（工程師精進空氣力學）具體說明試驗場上發生了什麼。而 (C) 的 drive at high speeds 也與下一句的 at speeds exceeding 200 km/h 直接呼應。",
+          notes:[
+            {term:"關鍵詞接續", pos:"技巧", gloss:"找出段首句的核心名詞（automobile industry），正確選項通常會重述或換句話說同一個概念（automobile manufacturers）。"},
+            {term:"testing ground", pos:"phr.", gloss:"試驗場、檢驗場所（a testing ground for new ideas）。adj. demanding 嚴苛的、要求高的"}
+          ]},
+
+        { n:58, kind:"段首句 (2%)", answer:"E", answerText:"(E) The Autobahn, ultimately, is not just a network of highways, but a symbol of Germany's engineering excellence and driving culture.",
+          stem:"______ While growing concerns about road safety, environmental protection, and new transportation technologies continue to fuel debates over speed limits, the Autobahn remains closely connected to Germany's automotive heritage.",
+          translation:"說到底，高速公路不只是一個公路網，而是德國工程卓越與駕駛文化的象徵。",
+          why:"這是最後一段的段首句，功能是總結全文。(E) 用 not just A but B 的句型把前面三段談的工程、工業、文化全部收攏：not just a network of highways（不只是公路網）否定表層，but a symbol of Germany's engineering excellence and driving culture（而是工程卓越與駕駛文化的象徵）點出深層意義，正好對應本段結尾 can shape a country's identity in the global automotive world（形塑一國在全球汽車世界的身分）。副詞 ultimately（說到底）更是總結語氣的標記。\n\n至於未被使用的 (D)，它是精心設計的干擾選項：它提到 AI-assisted monitoring system（AI 輔助監測系統），而全文第一句明確說那是「世界各地其他國家」的做法，德國正是與之形成 a striking contrast（鮮明對比）。把 (D) 填進任何位置都會與文章立場矛盾。",
+          notes:[
+            {term:"末段首句的總結功能", pos:"技巧", gloss:"最後一段開頭常是「拉高層次的總結」，會用 not just A but B／far more than 這類句式把全文主題提升。看到 ultimately、in the end、after all 這類副詞，更是總結句的明顯標記。"},
+            {term:"干擾選項的辨識", pos:"技巧", gloss:"(D) 挪用了第一段的 AI-assisted monitoring，但立場顛倒。篇章結構的干擾選項常用文中出現過的字眼，卻把邏輯方向弄反。"}
+          ]}
+      ]
+    }]
+  },
+
+  {
+    id:"rc", label:"五、閱讀測驗", score:"8% · 每題 2%",
+    instruction:"超級食物（superfood）的行銷與代價。答案：59 C　60 B　61 B　62 D",
+    groups:[{
+      passage:"Wander through any supermarket today and you will inevitably encounter shelves devoted to items marketed as “superfoods”: kale, chia seeds, acai berries, turmeric, each promising benefits that range from disease prevention to the deceleration of aging itself. However, nutrition scientists have grown markedly skeptical of the term, which possesses no formal scientific definition and originated not in a research institution but in a marketing campaign nearly a century ago.\n\nThe term first entered common usage in the early twentieth century, when banana growers sought a way to distinguish their product amid a crowded produce market. In the decades since, the superfood label has been applied so liberally, to everything from blueberries to bone broth, that its meaning has become almost meaningless from a scientific standpoint. What unites these foods is not the shared nutritional composition but a shared marketing appeal: each is framed as an easy, almost magical shortcut to health, allowing consumers to believe that a single ingredient is capable of offsetting an otherwise unbalanced diet.\n\nNone of this is to suggest the foods themselves are nutritionally negligible. Kale is genuinely rich in vitamins and antioxidant compounds; chia seeds do supply fiber and omega-3 fatty acids in appreciable quantities. The concern researchers raise is less about the foods and more about the psychology the superfood label exploits. Behavioral economists have documented what they term the “health halo effect”: when a product is marketed as exceptionally virtuous, consumers subconsciously grant themselves license to indulge elsewhere in their diet, as though nutritional merit were a currency that could be banked and later spent. A shopper who purchases an acai bowl may unconsciously justify an unhealthy meal later, believing their diet has already been “balanced” by the earlier virtuous choice.\n\nCompounding the issue is the environmental and economic cost hidden behind the superfood label. As global demand for quinoa surged following its elevation to superfood status, prices within its native Andean region climbed so sharply that many local families found the very staple that had sustained their ancestors for generations priced beyond their own reach. The pursuit of nutritional virtue among wealthy consumers thousands of miles away, in other words, can impose costs on populations wholly excluded from that pursuit's benefits. Ultimately, nutritionists share a broad consensus that no single food, however nutrient-dense, can substitute for holistic dietary variety, a conclusion much less marketable than a miracle ingredient, but far nearer the truth.",
+      zh:"今天走進任何一家超市，你一定會看到專門擺放標榜為「超級食物」商品的貨架：羽衣甘藍、奇亞籽、巴西莓、薑黃，每一樣都承諾著從預防疾病到延緩老化本身的各種益處。然而營養科學家對這個詞已變得明顯存疑，因為它沒有正式的科學定義，而且它的起源不是研究機構，而是將近一世紀前的一場行銷活動。\n\n這個詞最早在二十世紀初進入日常用語，當時香蕉種植業者想找個辦法讓自家產品在擁擠的農產市場中突顯出來。在那之後的幾十年間，超級食物這個標籤被濫用到了什麼都能貼的程度，從藍莓到骨頭高湯，以至於從科學的角度看它的意義幾乎等於零。把這些食物串在一起的並不是共同的營養成分，而是共同的行銷賣點：每一樣都被包裝成通往健康的一條簡便、近乎神奇的捷徑，讓消費者相信單一種食材就足以抵銷一份原本並不均衡的飲食。\n\n這一切並不是在暗示這些食物本身的營養可以忽略不計。羽衣甘藍確實富含維生素與抗氧化化合物；奇亞籽也確實提供可觀數量的纖維與 omega-3 脂肪酸。研究者提出的疑慮，比較不在於食物本身，而更在於超級食物這個標籤所利用的心理。行為經濟學家記錄了他們稱為「健康光環效應」的現象：當一項產品被行銷成格外有益時，消費者會下意識地允許自己在飲食的其他地方放縱，彷彿營養上的功德是一種可以先存起來、之後再花掉的貨幣。一個買了巴西莓果碗的消費者，可能會下意識為自己之後的一頓不健康餐食找理由，相信自己的飲食已經被先前那個有益的選擇「平衡」掉了。\n\n讓問題更加複雜的，是藏在超級食物標籤背後的環境與經濟代價。隨著藜麥被捧上超級食物的地位、全球需求激增，它原產的安地斯山區價格飆漲得如此劇烈，使得許多當地家庭發現那個世代養育他們祖先的主食，價格已經超出他們自己的負擔能力。換句話說，數千英里之外富裕消費者對營養美德的追求，可能把代價加在那些完全被排除在這份追求的好處之外的人群身上。最終，營養學家有一個廣泛的共識：沒有任何單一食物，無論營養密度多高，能夠取代整體飲食的多樣性——這個結論遠不如一種神奇食材那麼好賣，卻離真相近得多。",
+      questions:[
+        { n:59, kind:"主旨細節 (2%)",
+          stem:"According to the passage, why are nutrition scientists concerned about the term “superfood”?",
+          options:{A:"The term was invented specifically to mislead consumers about the safety of imported produce. 這個詞是專為了誤導消費者對進口農產品安全性的認知而發明的。",B:"Research has shown that the nutritional claims made about foods like kale and chia seeds are false. 研究顯示關於羽衣甘藍與奇亞籽等食物的營養聲稱是不實的。",C:"The term lacks an agreed scientific definition and marketers use it to take advantage of consumers. 這個詞缺乏公認的科學定義，而行銷人員利用它來占消費者的便宜。",D:"The foods marketed under this label are typically less nutritious than their conventional counterparts. 掛上這個標籤的食物通常比一般同類食物更不營養。"}, answer:"C",
+          translation:"根據本文，營養科學家為何對「超級食物」這個詞感到憂慮？",
+          explain:{
+            A:"動機與對象都被改寫了。原文說這個詞 originated ... in a marketing campaign（起源於一場行銷活動），目的是 banana growers sought a way to distinguish their product（香蕉業者想讓產品突顯），那是為了促銷而非為了誤導安全性；而且全文從未談過 imported produce（進口農產品）的安全問題。",
+            B:"原文明確否認了這一點。第三段開頭就說 None of this is to suggest the foods themselves are nutritionally negligible（這並不是說這些食物本身營養可忽略），接著還肯定 Kale is genuinely rich in vitamins（羽衣甘藍確實富含維生素）、chia seeds do supply fiber（奇亞籽確實提供纖維）。科學家質疑的是標籤，不是食物。",
+            C:"兩個理由都在第一段與第三段找得到。第一段：which possesses no formal scientific definition（沒有正式科學定義）對應 lacks an agreed scientific definition；第三段：the psychology the superfood label exploits（這個標籤所利用的心理）與 health halo effect（健康光環效應）對應 marketers use it to take advantage of consumers。兩個要素齊備。",
+            D:"程度被捏造了。原文從未把超級食物與一般食物做營養比較，反而肯定了它們的營養價值。這是把「標籤沒意義」誤讀成「食物比較差」。"
+          },
+          notes:[
+            {term:"區分「標籤」與「食物」", pos:"技巧", gloss:"本文的核心論點是 The concern ... is less about the foods and more about the psychology。看到選項在攻擊食物本身，就可以先刪掉。"},
+            {term:"skeptical of", pos:"adj.", gloss:"對…存疑（be skeptical of／about sth）。n. skepticism；n. skeptic 懷疑論者"}
+          ]},
+
+        { n:60, kind:"字義推論 (2%)",
+          stem:"In the third paragraph, which of the following best captures the meaning of the phrase “a currency that could be banked and later spent”?",
+          options:{A:"It refers to how expensive superfoods are compared to regular fruits and vegetables. 它指的是超級食物與一般蔬果相比有多昂貴。",B:"It means people mentally save up healthy choices to justify eating unhealthy food later. 它意指人們在心理上把健康的選擇存起來，用以為之後吃不健康的食物找理由。",C:"It explains how food companies calculate the profits they make from marketing superfoods. 它說明食品公司如何計算行銷超級食物所賺得的利潤。",D:"It suggests that buying superfoods helps consumers spend less money on groceries over time. 它暗示購買超級食物能幫消費者長期省下食品雜貨的錢。"}, answer:"B",
+          translation:"在第三段中，下列哪一項最能掌握「一種可以先存起來、之後再花掉的貨幣」這個片語的意思？",
+          explain:{
+            A:"被字面上的 currency（貨幣）誤導了。這個片語是比喻，as though（彷彿）一詞已經明示它不是真的在談錢；而且全文談超級食物的價格是在第四段的藜麥部分，與第三段的心理機制無關。",
+            B:"片語的上下文就是解答。前半句說 consumers subconsciously grant themselves license to indulge elsewhere in their diet（消費者下意識允許自己在飲食別處放縱），後面的例子更具體：A shopper who purchases an acai bowl may unconsciously justify an unhealthy meal later（買了巴西莓果碗的人可能為之後的不健康餐食找理由）。把營養功德當成「可存可花的貨幣」，正是這種心理記帳。",
+            C:"主體弄錯了。這個比喻描述的是「消費者」的心理，不是「食品公司」的會計作業；banked and spent 的主詞是 nutritional merit（營養上的功德），不是利潤。",
+            D:"方向完全相反，而且無憑無據。原文從未說超級食物能幫人省錢，第四段反而指出它推高了藜麥價格。"
+          },
+          notes:[
+            {term:"as though 是比喻的訊號", pos:"技巧", gloss:"as though／as if 之後的內容是假設性的比擬，不可照字面理解。看到它就知道該往前後文找這個比喻在說什麼道理。"},
+            {term:"health halo effect", pos:"n.", gloss:"健康光環效應：某產品被貼上健康標籤後，人們高估它的益處並放寬其他飲食的自我要求。"}
+          ]},
+
+        { n:61, kind:"作者意圖 (2%)",
+          stem:"What does the author intend to emphasize with the final sentence's contrast between what is “marketable” and what is “nearer the truth”?",
+          options:{A:"Many nutritionists disagree on what foods qualify as beneficial. 許多營養學家對哪些食物算有益看法不一。",B:"An easily marketed claim leads consumers to overlook the plain truth. 容易行銷的說法會讓消費者忽略那個平實的真相。",C:"Consumers become skeptical of food marketed as exceptionally healthy. 消費者會對被行銷為格外健康的食物產生懷疑。",D:"Superfoods are financially profitable but nutritionally worthless for consumers. 超級食物在財務上有利可圖，但對消費者毫無營養價值。"}, answer:"B",
+          translation:"作者在最後一句中對比「好賣的」與「離真相更近的」，意在強調什麼？",
+          explain:{
+            A:"與原文直接矛盾。最後一句明寫 nutritionists share a broad consensus（營養學家有廣泛的共識），而非意見分歧。這是把 consensus 讀反了。",
+            B:"最後一句的對比結構是關鍵：a conclusion much less marketable than a miracle ingredient, but far nearer the truth（這個結論遠不如神奇食材好賣，卻離真相近得多）。作者把「好賣」與「真實」擺在對立面，正是在惋惜真相因為不吸引人而被忽略。而第二段的 a shared marketing appeal（共同的行銷賣點）也鋪陳了同樣的批評。",
+            C:"主詞被換掉了。第一段說變得存疑的是 nutrition scientists（營養科學家），不是消費者；全文反而描述消費者容易被標籤說服（health halo effect）。",
+            D:"後半句過度延伸。原文第三段明確肯定這些食物的營養價值（Kale is genuinely rich in vitamins），所以 nutritionally worthless（毫無營養價值）不成立。這是最需要分辨的選項：有利可圖是對的，毫無營養是錯的，一半對不算對。"
+          },
+          notes:[
+            {term:"對比句的作者立場", pos:"技巧", gloss:"A but B 的結構中，作者的立場通常落在 but 之後。本句 but far nearer the truth 才是作者要人記住的重點。"},
+            {term:"一半對的選項", pos:"技巧", gloss:"選項前半正確、後半誇大，是閱讀測驗最常見的陷阱。四個選項都要讀完整句再判斷。"}
+          ]},
+
+        { n:62, kind:"圖表判讀 (2%)",
+          stem:"Based on the graph (quinoa export prices, 2004-2024), which of the following best reflects the trend mentioned in the LAST paragraph?",
+          options:{A:"The graph proves that superfood marketing caused quinoa's nutritional value to increase between 2004 and 2024. 此圖證明超級食物行銷使藜麥的營養價值在二○○四至二○二四年間提高。",B:"The rise in export prices directly disproves the passage's claim that quinoa became less affordable for Andean families. 出口價格的上漲直接反駁了本文所稱藜麥對安地斯家庭變得更難負擔的說法。",C:"The graph shows that quinoa prices gradually fell after 2010, contradicting the passage's account of the “health halo effect.” 此圖顯示藜麥價格在二○一○年後逐漸下跌，與本文對「健康光環效應」的敘述相矛盾。",D:"In the past two decades, the rising global demand for quinoa drove prices beyond the reach of the people who traditionally relied on it. 在過去二十年間，全球對藜麥日增的需求使價格高漲到超出傳統上依賴它的人們的負擔能力。"}, answer:"D",
+          translation:"根據圖表（藜麥出口價格，二○○四至二○二四年），下列哪一項最能反映最後一段所提到的趨勢？",
+          explain:{
+            A:"把兩件不相干的事混在一起了。價格圖表只能顯示價格的變化，無法證明任何關於 nutritional value（營養價值）的事；而且營養價值不會因為行銷而改變。",
+            B:"邏輯方向顛倒。出口價格上漲正是原文所說 prices ... climbed so sharply that many local families found the very staple ... priced beyond their own reach（價格飆漲到當地家庭負擔不起）的證據，它支持而非反駁原文。",
+            C:"與圖表趨勢相反。本題圖表顯示的是價格上升，而非 fell after 2010（二○一○年後下跌）；而且健康光環效應是第三段的心理機制，與第四段的價格問題不是同一回事。",
+            D:"完整對應最後一段的因果鏈：global demand for quinoa surged（全球需求激增）→ prices ... climbed so sharply（價格飆漲）→ priced beyond their own reach（超出當地家庭負擔）。而 the people who traditionally relied on it（傳統上依賴它的人）正是原文 the very staple that had sustained their ancestors for generations（世代養育其祖先的主食）所指的對象。"
+          },
+          notes:[
+            {term:"圖表題的作法", pos:"技巧", gloss:"圖表題考的是「圖與文是否一致」。先確認圖的趨勢方向（本題為上升），再逐一刪掉方向錯誤、超出圖表所能證明範圍的選項。"},
+            {term:"staple", pos:"n.", gloss:"主食、主要產品（rice is a staple in Asia）。adj. staple 主要的、基本的"}
+          ]}
+      ]
+    }]
+  },
+
+  {
+    id:"mx", label:"六、混合題", score:"8% · 每題 2%",
+    instruction:"莎士比亞與珍．奧斯汀對英語詞彙的貢獻。答案：63 heart of gold　64 dressed　65 D　66 B+D（多選，錯一項扣 1 分）",
+    groups:[{
+      passage:"The English language has evolved alongside the creativity of its writers. Over the centuries, countless words and expressions born from literature have remained part of everyday English. Here is a look at two authors whose linguistic legacies have profoundly shaped the way we speak now.\n\n【William Shakespeare】Regarded as England's national poet, William Shakespeare was also arguably one of the greatest playwrights in history. Through timeless works like Romeo and Juliet and Hamlet, he explored universal themes of love, ambition, and human nature. Aside from his literary achievements, Shakespeare left an indelible mark on the English language. His plays breathed new life into existing expressions by giving them new figurative meanings. For instance, we now use “break the ice” to describe the act of easing tension and initiating a friendly conversation, refer to a kind-hearted person as having a “heart of gold,” or call someone deeply cherished “the apple of our eye.” Likewise, the phrase “the world is your oyster,” which suggests that one has endless opportunities ahead, continues to appear in contemporary media. Moreover, Shakespeare frequently employed conversion, changing a word's grammatical category without altering its form, to create flexible expressions. For example, he transformed nouns into verbs in innovative ways, giving rise to usages such as “to elbow” and “to grace.” These examples showcase Shakespeare's wordplay and his lasting impact on modern English.\n\n【Jane Austen】Jane Austen was one of Britain's most influential novelists, best known for works such as Pride and Prejudice and Sense and Sensibility. In her novels, she vividly portrayed the customs of British society while illuminating women's dependence on marriage in the early nineteenth century. In doing so, Austen coined numerous new words to capture her characters' emotional nuance. For example, she is often credited with the earliest use of “brace yourself,” meaning to prepare oneself for something formidable or unpleasant. Other expressions associated with her include “dirt cheap,” referring to something extremely inexpensive, and “dog-tired,” meaning completely exhausted. More intriguingly, even the culinary verb “dress,” meaning to add seasoning or sauce to a salad, is first recorded in her work. Austen also occasionally created new words simply by adding an “r” to an existing term. For instance, she formed “sympathiser” from the verb “sympathise,” creating a noun that refers to someone who expresses sympathy or support for another person.",
+      zh:"英語是隨著作家的創造力一起演進的。數世紀以來，無數源自文學的字詞與表達方式一直留在日常英語之中。以下來看看兩位作家，他們在語言上的遺產深深形塑了我們現在說話的方式。\n\n【莎士比亞】被視為英格蘭的國民詩人，莎士比亞也堪稱史上最偉大的劇作家之一。透過《羅密歐與茱麗葉》和《哈姆雷特》這類不朽的作品，他探索了愛情、野心與人性這些普世的主題。除了文學成就之外，莎士比亞也在英語上留下了難以抹滅的印記。他的劇作賦予既有的表達方式新的比喻意義，讓它們重獲新生。舉例來說，我們現在用 break the ice 來形容緩和緊張氣氛、開啟友善談話的舉動，用 heart of gold 來指稱一個心地善良的人，或把深受珍愛的人稱為 the apple of our eye。同樣地，the world is your oyster 這個片語，意思是一個人前方有無盡的機會，至今仍持續出現在當代媒體中。此外，莎士比亞經常使用「詞類轉換」——在不改變字形的情況下改變一個字的語法類別——來創造靈活的表達方式。例如他以創新的方式把名詞變成動詞，產生了 to elbow（用手肘推開）與 to grace（使增光）這樣的用法。這些例子展現了莎士比亞的文字遊戲，以及他對現代英語的長遠影響。\n\n【珍．奧斯汀】珍．奧斯汀是英國最具影響力的小說家之一，以《傲慢與偏見》和《理性與感性》等作品最為知名。在她的小說中，她生動地描繪了英國社會的習俗，同時也揭示了十九世紀初女性對婚姻的依賴。在這麼做的過程中，奧斯汀創造了許多新字來捕捉她筆下人物細微的情感。例如，brace yourself 最早的用法常被歸功於她，意思是讓自己做好心理準備去面對某件艱難或不愉快的事。與她相關的其他表達還包括 dirt cheap（極其便宜）與 dog-tired（累到不行）。更有意思的是，連烹飪用的動詞 dress——意指為生菜加上調味或醬汁——也是最早記錄在她的作品中。奧斯汀偶爾也只是在既有的字後面加一個 r 就創造出新字。例如她從動詞 sympathise 造出 sympathiser，形成一個指稱對他人表達同情或支持的人的名詞。",
+      questions:[
+        { n:63, kind:"片語填空 (2%)", answerText:"heart of gold",
+          stem:"Refer to the passage and choose from the words or expressions used by William Shakespeare or Jane Austen to complete the sentence. Make changes to the form of the word if necessary.\n\nPrometheus is remembered as a mythological figure with a(n) ______ because he endured eternal punishment from Zeus for bringing fire to humanity.",
+          translation:"普羅米修斯被記為一位心地善良的神話人物，因為他為了把火帶給人類而承受了宙斯永恆的懲罰。",
+          why:"空格前有不定冠詞 a(n)，所以要填名詞片語。語意線索在 because 子句：he endured eternal punishment from Zeus for bringing fire to humanity（他為了把火帶給人類而承受永恆的懲罰）——為了造福人類而自願受苦，這是極為善良的心性。文章中對應的片語是 refer to a kind-hearted person as having a “heart of gold”（用 heart of gold 指稱心地善良的人），完全吻合。\n\n為什麼不是其他莎翁片語？break the ice 指打破僵局、the apple of our eye 指深受珍愛的人（但普羅米修斯並非被宙斯珍愛，而是被懲罰）、the world is your oyster 指前途無限（與受罰的處境相反），都接不上 because 子句的理由。",
+          notes:[
+            {term:"a heart of gold", pos:"phr.", gloss:"心地善良、金子般的心（have a heart of gold）", ex:"He looks tough but has a heart of gold.", exZh:"他看起來兇，卻有一副善良的心。"},
+            {term:"看冠詞定詞性", pos:"技巧", gloss:"空格前是 a(n)，就必須填單數名詞或名詞片語。這一步就能刪掉 break the ice 這類動詞片語。"}
+          ]},
+
+        { n:64, kind:"字形變化 (2%)", answerText:"dressed",
+          stem:"The restaurant's signature salad features organic vegetables ______ with extra-virgin olive oil and a pinch of sea salt, allowing the natural flavors to stand out.",
+          translation:"這家餐廳的招牌沙拉以有機蔬菜為主角，淋上特級初榨橄欖油與一小撮海鹽調味，讓天然的風味得以突顯。",
+          why:"文章提到 the culinary verb “dress,” meaning to add seasoning or sauce to a salad（烹飪用動詞 dress，意為為生菜加上調味或醬汁），這正是本句的情境：with extra-virgin olive oil and a pinch of sea salt（加上橄欖油與海鹽）。\n\n字形變化是本題的重點：空格修飾的是前面的名詞 organic vegetables，而蔬菜是「被調味」的，所以要用過去分詞 dressed 作後位修飾（＝organic vegetables that are dressed with...）。若填原形 dress 會與主要動詞 features 衝突，整句出現兩個動詞。",
+          notes:[
+            {term:"dress", pos:"vt.", gloss:"① 為（沙拉）加調味醬（dress a salad with vinaigrette）② 穿衣 ③ 包紮傷口（dress a wound）。n. dressing 沙拉醬、敷料", ex:"Dress the salad just before serving.", exZh:"上菜前才淋上沙拉醬。"},
+            {term:"過去分詞後位修飾", pos:"文法", gloss:"名詞＋p.p. ＝ 被…的（vegetables dressed with oil ＝ 淋上油的蔬菜）。等於省略了 which are。"}
+          ]},
+
+        { n:65, kind:"文本判讀 (2%)",
+          stem:"The following four excerpts are taken from the works of William Shakespeare and Jane Austen. Which ONE was most likely written by Jane Austen?",
+          options:{A:"“Why, then the world's mine oyster, which I with sword will open.” 那麼世界就是我的牡蠣，我要用劍把它打開。",B:"“Away, away, good William de la Pole! We grace the yeoman by conversing with him.” 走吧走吧，好威廉·德拉波爾！我們與這自由民交談已是給他增光。",C:"“And if you break the ice and do this feat, Achieve the elder, set the younger free...” 若你打破僵局、完成此舉，先攻下姊姊，便能讓妹妹自由…",D:"“The looking over his letter again, in replying to it, had such a softening tendency, that it was particularly necessary to brace her up with a few decisive expressions.” 重讀他的信並回覆它，有著如此令人心軟的傾向，因此特別需要用幾句果斷的話讓她振作起來。"}, answer:"D",
+          translation:"下列四段摘錄取自莎士比亞與珍．奧斯汀的作品。哪一段最可能是珍．奧斯汀所寫？",
+          explain:{
+            A:"這是莎士比亞的句子。文章明確把 the world is your oyster 歸給莎翁，而 mine oyster 的古體所有格與 which I with sword will open 的倒裝語序，也都是莎劇的詩體特徵。",
+            B:"這也是莎士比亞。關鍵字 grace 正是文章所舉的例子之一——he transformed nouns into verbs ... giving rise to usages such as “to elbow” and “to grace”（把名詞轉成動詞，產生 to elbow 與 to grace）；而 William de la Pole 是莎劇《亨利六世》的人物。",
+            C:"同樣是莎士比亞。break the ice 在文章中被明白歸給莎翁，而且 Achieve the elder, set the younger free 的命令句詩行與無標點的韻文斷句，都是劇本台詞的形式。",
+            D:"兩個線索都指向奧斯汀。第一，文中明寫她 is often credited with the earliest use of “brace yourself”（最早使用 brace yourself），而本段正是 brace her up with a few decisive expressions。第二，文體完全不同：這是結構綿長、帶有 such ... that 複句的散文敘事，討論的是書信往來與內心的軟化，正是奧斯汀小說分析人物心理的筆法，而非舞台對白。"
+          },
+          notes:[
+            {term:"brace oneself / brace sb up", pos:"phr.", gloss:"讓自己（或某人）做好心理準備、振作起來（brace yourself for bad news）", ex:"Brace yourself: the news isn't good.", exZh:"你做好心理準備：消息不太好。"},
+            {term:"用文體判斷作者", pos:"技巧", gloss:"除了找關鍵片語，也可看形式：詩行、命令句、古體字（mine／thee）屬戲劇；長句、心理描寫、間接敘述屬小說。兩條線索互相印證最保險。"}
+          ]},
+
+        { n:66, kind:"多選 (2%)",
+          stem:"From (A) to (F) below, choose the ONES that are true for BOTH William Shakespeare and Jane Austen.",
+          options:{A:"They are both literary giants who excelled in the same writing genre. 兩人都是在同一種寫作類型上卓越的文學巨匠。",B:"Their literary works both made an enduring contribution to English vocabulary today. 兩人的文學作品都對今日的英語詞彙做出了持久的貢獻。",C:"They both used their writing to criticize the unfair treatment of women in British society. 兩人都用寫作批評英國社會對女性的不公待遇。",D:"They both combined creative language use with insightful exploration of human experiences. 兩人都把創造性的語言運用與對人類經驗的深刻探索結合起來。",E:"Their writing was mainly characterized by rhythm and wordplay as the key to their popularity. 兩人的寫作主要以韻律與文字遊戲為特色，這是他們受歡迎的關鍵。",F:"Their impact on English came from inventing new words rather than reshaping existing expressions. 兩人對英語的影響來自創造新字，而非重塑既有的表達方式。"}, multi:["B","D"], answer:"B",
+          translation:"從下列 (A) 到 (F) 中，選出對莎士比亞與珍．奧斯汀兩人都成立的選項。",
+          explain:{
+            A:"文類不同。莎士比亞是 one of the greatest playwrights（最偉大的劇作家之一），寫的是戲劇；奧斯汀是 one of Britain's most influential novelists（最具影響力的小說家之一），寫的是小說。同為文學巨匠沒錯，但 the same writing genre（同一種文類）不成立。",
+            B:"兩人都成立。莎翁：left an indelible mark on the English language（在英語上留下難以抹滅的印記）；奧斯汀：coined numerous new words（創造了許多新字），而且 dirt cheap、dog-tired 等至今仍在使用。文章的開場句 countless words and expressions born from literature have remained part of everyday English 更是兩人共同的總綱。",
+            C:"只有奧斯汀沾得上邊，而且說法過強。文章說她 illuminating women's dependence on marriage（揭示女性對婚姻的依賴），illuminate 是「呈現、照亮」而非 criticize（批評）；至於莎翁，文中談的是 love, ambition, and human nature（愛情、野心與人性），完全沒有提到女性處境。",
+            D:"兩人都成立。語言創造方面：莎翁用 conversion（詞類轉換）創造 to elbow、to grace，奧斯汀加 r 造出 sympathiser。人類經驗方面：莎翁 explored universal themes of love, ambition, and human nature（探索愛情、野心與人性的普世主題），奧斯汀 portrayed the customs of British society 並 capture her characters' emotional nuance（捕捉人物細微的情感）。兩個條件都各自齊備。",
+            E:"這是誘答力最強的錯項。莎劇以無韻詩寫成，rhythm（韻律）確實是它的特徵之一，所以學生容易點頭。但兩個關鍵都站不住腳：第一，奧斯汀寫的是小說，文中談她的是 coined numerous new words 與 capture her characters' emotional nuance（創造新字、捕捉人物情感），完全沒有提到韻律；第二，文章從未說這些是兩人受歡迎的 the key（關鍵），mainly 與 the key 都是文中找不到依據的絕對化說法。",
+            F:"方向正好相反，而且兩人都不符。莎翁是 breathed new life into existing expressions by giving them new figurative meanings（賦予既有表達新的比喻意義），正是「重塑既有表達」；奧斯汀雖有造新字，但 brace yourself、dirt cheap、dog-tired 也都是用既有的字組合出新義。rather than 的排他說法使這個選項錯誤。"
+          },
+          notes:[
+            {term:"BOTH 題的解法", pos:"技巧", gloss:"必須兩人都成立才能選。先各自檢查莎翁與奧斯汀，只要一方找不到依據就刪除。(A)(C) 就是只有一方成立的陷阱。"},
+            {term:"絕對化字眼要警覺", pos:"技巧", gloss:"the same／mainly／rather than／the key 這類絕對或排他的說法，通常是出題者刻意加上的錯誤點。(A)(E)(F) 三個錯項都靠這招。"}
+          ]}
+      ]
+    }]
+  },
+
+  {
+    id:"wd", label:"七、文意字彙", score:"14% · 每題 1%",
+    instruction:"根據句意與所給的首尾字母，寫出適當的單字。答案：67 subsequent　68 withdrew　69 compulsory　70 identical　71 strategic　72 considerably　73 possession　74 deceive　75 cautious　76 phenomenon　77 evaluates　78 candidates　79 penetrating　80 justify",
+    groups:[{
+      questions:[
+        { n:67, kind:"s___t（形容詞）", answerText:"subsequent 後續的、隨後的",
+          stem:"The researchers conducted an initial study, and ______ studies months later confirmed those findings.",
+          translation:"研究人員進行了一項初步研究，而數月後的後續研究證實了那些發現。",
+          why:"空格修飾名詞 studies，要填形容詞。線索是對比結構：an initial study（初步研究）對應 months later（數月之後），所以空格要表達「時間上在後的」。subsequent 意為「後續的、隨後的」，正是 initial 的時序反義詞。",
+          notes:[{term:"subsequent", pos:"adj.", gloss:"後續的、隨後的（subsequent events／studies；subsequent to sth 在…之後）。adv. subsequently 隨後", ex:"Subsequent tests confirmed the result.", exZh:"後續的測試證實了這個結果。"},
+            {term:"initial vs. subsequent", pos:"對照", gloss:"initial 最初的／subsequent 後續的。這組反義詞常在研究與報導的語境中成對出現。"}]},
+
+        { n:68, kind:"w___w（動詞過去式）", answerText:"withdrew 退出、不再參與",
+          stem:"After facing harsh criticism online, the singer ______ from interviews and avoided public appearances.",
+          translation:"在網路上面對嚴厲批評之後，這位歌手退出了採訪，並避免公開露面。",
+          why:"空格後有介系詞 from，而且全句是過去式（faced、avoided），所以要填不及物動詞的過去式。withdraw from sth 意為「退出、不再參與」。線索是並列的 avoided public appearances（避免公開露面）——同樣是退縮的行為；而 After facing harsh criticism（在面對嚴厲批評之後）則是原因。三態為 withdraw-withdrew-withdrawn。",
+          notes:[{term:"withdraw", pos:"vi. / vt.", gloss:"退出、撤回、提款（withdraw from a race／withdraw money／withdraw a statement）。三態 withdraw-withdrew-withdrawn；n. withdrawal", ex:"She withdrew from the competition due to injury.", exZh:"她因傷退出了比賽。"},
+            {term:"本卷的 113 關聯", pos:"對照", gloss:"113 學測小考第 35 題也以 withdraw 當誘答（a whole herd may withdraw）。此字為高頻字。"}]},
+
+        { n:69, kind:"c___y（形容詞）", answerText:"compulsory 強制性的、義務的",
+          stem:"In many countries, including South Korea, Taiwan, and Singapore, military service is ______ for young men once they turn eighteen.",
+          translation:"在許多國家，包括南韓、臺灣與新加坡，兵役對年滿十八歲的男性而言是強制性的。",
+          why:"空格在 be 動詞之後當主詞補語，要填形容詞。線索是主詞 military service（兵役）與 once they turn eighteen（一旦年滿十八歲）——年齡一到就必須服役，是法定義務而非自由選擇。compulsory 意為「強制性的」，這也正是 113 學測詞彙題第 6 題的答案字。",
+          notes:[{term:"compulsory", pos:"adj.", gloss:"強制性的、義務的（compulsory education 義務教育／compulsory military service 強制兵役）。同義 mandatory／obligatory；反義 voluntary 自願的", ex:"Attendance at the briefing is compulsory.", exZh:"出席這場簡報是強制性的。"},
+            {term:"與本卷第 25 題對照", pos:"對照", gloss:"本卷綜合測驗第 25 題考 mandatory（強制換照），與本題的 compulsory 是同義字。段考中同義字跨大題出現，值得一起整理。"}]},
+
+        { n:70, kind:"i___l（形容詞）", answerText:"identical 完全相同的",
+          stem:"The two stars showed up wearing ______ dresses, with the same design, color, and pattern, creating an unexpected fashion moment.",
+          translation:"兩位明星穿著一模一樣的禮服出現，設計、顏色與圖案都相同，造就了一個出人意料的時尚時刻。",
+          why:"空格修飾名詞 dresses，要填形容詞。決定性線索就在後面的同位語：with the same design, color, and pattern（設計、顏色、圖案都相同）——三項全都一樣，就是 identical（完全相同、一模一樣）。而 an unexpected fashion moment（出人意料的時尚時刻）也暗示這種撞衫是巧合。",
+          notes:[{term:"identical", pos:"adj.", gloss:"完全相同的、一模一樣的（identical twins 同卵雙胞胎；be identical to／with sth）。n. identity 身分、同一性", ex:"The two signatures look identical.", exZh:"這兩個簽名看起來一模一樣。"},
+            {term:"similar vs. identical", pos:"辨析", gloss:"similar 相似（有差異）；identical 完全相同（毫無差異）。本題有 the same design, color, and pattern 三項全同，所以要用程度更強的 identical。"}]},
+
+        { n:71, kind:"s___c（形容詞）", answerText:"strategic 戰略上重要的",
+          stem:"The fortress occupied a ______ position, overlooking the only mountain pass through which the enemy could advance.",
+          translation:"這座堡壘占據了一個戰略要地，俯瞰著敵軍唯一能夠推進的山口。",
+          why:"空格修飾名詞 position，要填形容詞。線索是分詞構句 overlooking the only mountain pass through which the enemy could advance（俯瞰敵軍唯一能推進的山口）——控制住唯一的通道，這在軍事上具有決定性的價值。strategic 意為「戰略上重要的」，a strategic position 即「戰略要地」。",
+          notes:[{term:"strategic", pos:"adj.", gloss:"戰略上的、具戰略重要性的（a strategic location／partnership／decision）。n. strategy；adv. strategically", ex:"The port holds a strategic location.", exZh:"這座港口占有戰略位置。"},
+            {term:"fortress / pass", pos:"n.", gloss:"fortress 堡壘、要塞；（mountain) pass 山口、隘口。軍事地理的常用字"}]},
+
+        { n:72, kind:"c___bly（副詞）", answerText:"considerably 相當程度地、大幅地",
+          stem:"The operation of the High Speed Rail has ______ reduced travel time between cities in Taiwan, cutting many journeys by more than half.",
+          translation:"高鐵的營運大幅縮短了臺灣城際之間的旅行時間，許多旅程的時間都減少了一半以上。",
+          why:"空格在助動詞 has 與過去分詞 reduced 之間，要填副詞修飾動詞。線索是分詞構句給出的具體幅度：cutting many journeys by more than half（許多旅程縮短一半以上）——這是很大的幅度，所以副詞要表達「大幅地」。considerably 意為「相當程度地、大幅地」。",
+          notes:[{term:"considerably", pos:"adv.", gloss:"相當程度地、大幅地（＝significantly／substantially）。adj. considerable 相當多的、可觀的", ex:"Costs have risen considerably this year.", exZh:"今年成本大幅上升。"},
+            {term:"considerable vs. considerate", pos:"辨析", gloss:"considerable 相當多的（數量）／considerate 體貼的（人品）。拼法相近意思完全不同，是常考的易混字。"}]},
+
+        { n:73, kind:"p___n（名詞）", answerText:"possession 所有物、珍藏之物",
+          stem:"After her grandmother passed away, the old ring became her most treasured ______ because it reminded her of their time together.",
+          translation:"在祖母過世之後，那只舊戒指成了她最珍視的所有物，因為它讓她想起兩人共度的時光。",
+          why:"空格前有形容詞最高級 her most treasured（她最珍視的），要填名詞當主詞補語。語意上，主詞 the old ring（舊戒指）是一件屬於她的物品，而 because 子句說明它的情感價值。possession 意為「所有物」，one's most treasured possession（最珍視的所有物）是常見搭配。",
+          notes:[{term:"possession", pos:"n.", gloss:"所有物（複數 possessions 財物）；持有（in possession of sth 持有某物）。v. possess", ex:"He lost all his possessions in the fire.", exZh:"他在那場火災中失去了所有財物。"},
+            {term:"與本卷第 11 題對照", pos:"對照", gloss:"本卷綜合測驗第 11 題以 possession 當誘答（the possession of Taiwan's green mountains）。同一個字在段考中出現兩次，一次是誘答、一次是答案。"}]},
+
+        { n:74, kind:"d___e（動詞）", answerText:"deceive 欺騙、誤導",
+          stem:"This phishing page was designed to ______ users into entering their passwords, but the unusual web address made many people suspicious.",
+          translation:"這個釣魚網頁被設計來誘騙使用者輸入密碼，但那個不尋常的網址讓許多人起了疑心。",
+          why:"空格在 to 之後，要填原形動詞，而後面是 deceive A into V-ing 的結構（騙某人做某事）。線索有三：主詞 phishing page（釣魚網頁）本身就是詐騙工具、受詞是 users（使用者）、而目的是 entering their passwords（輸入密碼）。deceive 意為「欺騙」，名詞為 deception（本卷 L2+L3 評量第 5 題亦考過）。",
+          notes:[{term:"deceive sb into V-ing", pos:"句型", gloss:"騙某人去做某事（＝trick／fool sb into V-ing）。n. deception 欺騙；adj. deceptive 具欺騙性的", ex:"He deceived her into signing the contract.", exZh:"他騙她簽下了那份合約。"},
+            {term:"phishing", pos:"n.", gloss:"網路釣魚（偽裝成可信網站以騙取帳密）。與 fishing 同音，是刻意的拼法變體。"}]},
+
+        { n:75, kind:"c___s（形容詞）", answerText:"cautious 謹慎小心的",
+          stem:"Drivers should remain ______ especially during heavy rain as slippery roads and reduced visibility may increase the risk of accidents.",
+          translation:"駕駛應保持謹慎，尤其在大雨期間，因為濕滑的路面與降低的能見度可能增加事故的風險。",
+          why:"空格在連綴動詞 remain 之後，要填形容詞。線索是 as 引導的原因子句：slippery roads and reduced visibility may increase the risk of accidents（濕滑路面與能見度下降可能增加事故風險）——有風險就要小心。cautious 意為「謹慎小心的」，remain cautious 是常見搭配。",
+          notes:[{term:"cautious", pos:"adj.", gloss:"謹慎小心的（be cautious about／of sth）。n. caution 謹慎、警告；adv. cautiously；phr. exercise caution 謹慎行事", ex:"Investors remain cautious about the market.", exZh:"投資人對市場仍持謹慎態度。"},
+            {term:"cautious vs. wary", pos:"辨析", gloss:"兩者都是「小心」，但 wary 多因「不信任某對象」而提防（本卷第 1 題），cautious 則是面對「風險情境」時的審慎。"}]},
+
+        { n:76, kind:"ph___n（名詞）", answerText:"phenomenon 現象",
+          stem:"Phubbing, the act of ignoring other people while using a smartphone, has become a common social ______ in the digital age.",
+          translation:"低頭族行為，也就是一邊使用智慧型手機一邊忽略他人的舉動，已成為數位時代常見的社會現象。",
+          why:"空格前有形容詞 a common social（常見的社會的），要填單數名詞。語意上，主詞 Phubbing 是一種被觀察到、普遍存在的社會行為模式，正是 phenomenon（現象）。注意拼寫：ph 開頭、字中有 nomen，複數為不規則變化 phenomena。",
+          notes:[{term:"phenomenon", pos:"n.", gloss:"現象（複數 phenomena，源自希臘文）。a natural／social／global phenomenon", ex:"Social media addiction is a global phenomenon.", exZh:"社群媒體成癮是全球性的現象。"},
+            {term:"112 學測亦考過", pos:"對照", gloss:"112 學測綜合測驗以 phenomenon 描述 crown shyness（樹冠羞避），本卷 112+113 小考第 25 題也以它當誘答。"}]},
+
+        { n:77, kind:"e___es（動詞，第三人稱單數）", answerText:"evaluates 評估、評量",
+          stem:"The company regularly ______ its employees' performance to identify areas for improvement.",
+          translation:"這家公司定期評估員工的表現，以找出需要改善的地方。",
+          why:"主詞 The company 是第三人稱單數、時間副詞 regularly 表示習慣性動作，所以要填現在簡單式並加 s。語意上，受詞 its employees' performance（員工表現）加上目的 to identify areas for improvement（找出可改善之處），正是績效評估的流程。evaluate 意為「評估、評量」。",
+          notes:[{term:"evaluate", pos:"vt.", gloss:"評估、評量（evaluate performance／a program／the risks）。n. evaluation 評估", ex:"We evaluate each proposal carefully.", exZh:"我們仔細評估每一份提案。"},
+            {term:"第三人稱單數別漏 s", pos:"技巧", gloss:"主詞是單數、句中有 regularly／always／often 等頻率副詞時，動詞要用現在簡單式第三人稱單數。這一分最容易粗心丟掉。"}]},
+
+        { n:78, kind:"c___es（名詞複數）", answerText:"candidates 候選人",
+          stem:"The TV debate allowed the ______ for mayor to answer questions about healthcare, education, and environmental protection.",
+          translation:"這場電視辯論讓市長候選人得以回答關於醫療、教育與環境保護的問題。",
+          why:"空格前有定冠詞 the、後有 for mayor（競選市長的），要填名詞複數。語意上，a TV debate（電視辯論）與 for mayor（競選市長）都指向選舉場合，而能上台回答政策問題的正是 candidates（候選人）。candidate for + 職位 是固定搭配。",
+          notes:[{term:"candidate", pos:"n.", gloss:"候選人；應試者（a candidate for mayor／for the job；a presidential candidate）。n. candidacy 候選資格", ex:"Three candidates are running for the seat.", exZh:"三位候選人正在競選這個席次。"},
+            {term:"與 112+113 小考對照", pos:"對照", gloss:"112+113 學測小考第 16 題也考 candidates（選前被捏造醜聞的對象）。選舉主題在本學期多份考卷中反覆出現。"}]},
+
+        { n:79, kind:"p___ting（形容詞）", answerText:"penetrating 犀利的、尖銳深入的",
+          stem:"The judge asked ______ questions to expose inaccuracies in the witnesses' arguments.",
+          translation:"法官提出犀利深入的問題，以揭露證人論述中的不實之處。",
+          why:"空格修飾名詞 questions，要填形容詞（-ing 形式表「具有此性質的」）。線索是不定詞表目的的 to expose inaccuracies in the witnesses' arguments（揭露證人論述中的不實之處）——能戳破破綻的問題必然是尖銳深入的。penetrating 原意是「穿透的」，引申為「犀利、一針見血的」。",
+          notes:[{term:"penetrating", pos:"adj.", gloss:"犀利的、深入的（a penetrating question／gaze／insight）；本義「穿透的」。v. penetrate 穿透、深入", ex:"She asked a penetrating question about the budget.", exZh:"她針對預算提出了一個犀利的問題。"},
+            {term:"-ing 形容詞", pos:"文法", gloss:"現在分詞當形容詞表「主動引發某性質」：penetrating questions 犀利的問題／convincing evidence 有說服力的證據。"}]},
+
+        { n:80, kind:"j___y（動詞）", answerText:"justify 為…提出正當理由、合理化",
+          stem:"The company tried to ______ the sudden price increase by citing higher transportation and labor costs, but many customers remained unconvinced.",
+          translation:"這家公司試圖以運輸與人力成本上升為理由來為突然的漲價辯解，但許多顧客仍然不被說服。",
+          why:"空格在 to 之後，要填原形動詞，受詞是 the sudden price increase（突然的漲價）。線索是手段 by citing higher transportation and labor costs（援引運輸與人力成本上升）與結果 many customers remained unconvinced（許多顧客仍不被說服）——這是一場「提出理由為自己辯解」的攻防。justify 意為「為…提出正當理由、使合理化」。",
+          notes:[{term:"justify", pos:"vt.", gloss:"為…提出正當理由、使合理化（justify a decision／the cost；justify V-ing）。n. justification；phr. The end justifies the means. 為達目的不擇手段", ex:"Nothing can justify such cruelty.", exZh:"沒有任何事能為如此的殘酷辯解。"},
+            {term:"本卷閱讀測驗亦出現", pos:"對照", gloss:"第五大題閱讀測驗第 60 題的關鍵句即為 may unconsciously justify an unhealthy meal later（為之後的不健康餐食找理由）。同一個字在兩個大題出現。"}]}
+      ]
+    }]
+  },
+
+  {
+    id:"tr", label:"八、翻譯", score:"8% · 每題 4%",
+    instruction:"請依照括弧內的提示翻譯。斜線為計分單位，每題 4 格。",
+    groups:[{
+      questions:[
+        { n:81, kind:"lest / for fear that (4%)",
+          stem:"很多名人拒絕評論政治議題，免得被批評或誤解。",
+          answers:[
+            {k:"⑴", w:"Many celebrities decline to", note:"「很多名人拒絕」。decline to V 意為「婉拒做某事」，比 refuse 語氣稍緩和；填 refuse to 亦可。主詞 Many celebrities 為複數，動詞不加 s。"},
+            {k:"⑵", w:"comment on political issues", note:"「評論政治議題」。comment on sth 為固定搭配，介系詞 on 不可省略或換成 about 以外的字。"},
+            {k:"⑶", w:"lest they (should) be criticized　或　for fear that they would / should / might be criticized", note:"「免得」。lest 後接原形動詞或 should ＋ 原形（假設語氣），而且 lest 本身已含否定，不可再加 not。for fear that 則接 would／should／might ＋ 原形。名人是被批評的對象，須用被動 be criticized。"},
+            {k:"⑷", w:"or misunderstood", note:"「或誤解」。與 be criticized 由 or 並列，共用前面的 be，所以只寫過去分詞 misunderstood 即可，不必重複 be。"}
+          ],
+          translation:"很多名人拒絕評論政治議題，免得被批評或誤解。",
+          why:"本題四個計分點各有重點。最容易失分的是第三格：lest 的字義就是「以免、免得」，已經是否定，再加 not 會變成雙重否定；而且 lest 後面要用原形動詞（假設語氣），不能寫成 lest they are criticized。第四格則考並列省略——or 之後共用前面的 be，只留過去分詞。另外要注意兩個被動：名人是「被」批評、「被」誤解，不是主動去批評別人。",
+          notes:[
+            {term:"lest + S + (should) V", pos:"句型", gloss:"以免、免得（lest 本身含否定，絕不可再加 not）。同義：for fear that／in case／so that ... not", ex:"He spoke quietly lest he (should) be overheard.", exZh:"他輕聲說話，以免被人聽見。"},
+            {term:"decline to V", pos:"phr.", gloss:"婉拒做某事（decline to comment 拒絕評論，是新聞中的常見說法）。對照 decline ＋ N（decline an invitation）"}
+          ]},
+
+        { n:82, kind:"whoever (4%)",
+          stem:"這首詩說明了選擇的限制，引起任何曾面臨艱難決定的人的共鳴。（…whoever…）",
+          answers:[
+            {k:"⑴", w:"This poem illustrates the limits of choice", note:"「這首詩說明了選擇的限制」。illustrate 意為「說明、闡明」，受詞是 the limits of choice。注意要用定冠詞 the（參考解答印為 that limits of choice，應為 the 之誤）。"},
+            {k:"⑵", w:", striking a chord with", note:"「引起…的共鳴」。strike a chord with sb 為固定片語。此處用分詞構句承接前面的主詞 This poem，所以用現在分詞 striking，前面加逗號。"},
+            {k:"⑶", w:"whoever has faced", note:"「任何曾面臨…的人」。whoever ＝ anyone who，是複合關係代名詞，引導名詞子句當 with 的受詞。視為單數，所以現在完成式用 has faced。"},
+            {k:"⑷", w:"difficult decisions", note:"「艱難的決定」。泛指各種艱難決定，用複數不加冠詞。填 tough／hard decisions 亦可。"}
+          ],
+          translation:"這首詩說明了選擇的限制，引起任何曾面臨艱難決定的人的共鳴。",
+          why:"本題的核心是題目指定的 whoever。它是複合關係代名詞，本身已包含先行詞（＝anyone who），所以前面不可再加 anyone，而且它引導的是名詞子句，在本句中當介系詞 with 的受詞。動詞一致也是重點：whoever 視為單數，所以用 has faced 而非 have faced。第二格則考分詞構句——用 striking 讓「引起共鳴」自然承接前面的主詞 This poem，不必再寫一個完整子句。",
+          notes:[
+            {term:"strike a chord with sb", pos:"phr.", gloss:"引起某人的共鳴、觸動心弦（chord 原指和弦）", ex:"Her speech struck a chord with young voters.", exZh:"她的演講引起了年輕選民的共鳴。"},
+            {term:"whoever", pos:"複合關係代名詞", gloss:"＝anyone who，自帶先行詞，引導名詞子句，視為單數。對照 whomever（受格）與 whatever（事物）。", ex:"Whoever finishes first gets a prize.", exZh:"誰先完成就得獎。"}
+          ]}
+      ]
+    }]
+  }
+  ]
+};
+
+/* ==========================================================================
+   ②  以下為程式碼，一般情況不需要修改。
+   ========================================================================== */
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const wordOf = q => q.options ? q.options[q.answer] : (q.answerText || '');
+const allQ = [];
+EXAM.sections.forEach(s => s.groups.forEach(g => g.questions.forEach(q => allQ.push(q))));
+const findQ = n => allQ.find(q => String(q.n) === String(n));
+
+document.getElementById('brand').textContent = EXAM.brand;
+document.getElementById('examTitle').textContent = EXAM.title;
+document.getElementById('examMeta').textContent = EXAM.meta;
+
+let noteCount = 0;
+allQ.forEach(q => noteCount += (q.notes || []).length);
+
+const nav = document.getElementById('nav');
+EXAM.sections.forEach(s => {
+  const a = document.createElement('a');
+  a.className = 'chip'; a.href = '#sec-' + s.id; a.textContent = s.label.replace(/^[一二三四五六]、/, m => m);
+  nav.appendChild(a);
+});
+const noteChip = document.createElement('a');
+noteChip.className = 'chip'; noteChip.href = '#side'; noteChip.textContent = '重點表 ' + noteCount;
+nav.appendChild(noteChip);
+const toggleAll = document.createElement('button');
+toggleAll.className = 'chip solid'; toggleAll.textContent = '全部展開';
+nav.appendChild(toggleAll);
+
+function renderPassage(g, i, sid) {
+  let html = esc(g.passage);
+  g.questions.forEach(q => {
+    if (!q.evidence) return;
+    const t = esc(q.evidence);
+    if (html.includes(t)) html = html.replace(t, `<span class="hl ev" data-ev="${q.n}">${t}</span>`);
+  });
+  html = html.replace(/__(\d+)__/g, (m, n) =>
+    `<button class="blank" data-blank="${n}" aria-label="第 ${n} 題空格">${n}</button>`);
+  const body = '<div class="passage">' +
+    html.split(/\n{2,}/).map(p => '<p>' + p.replace(/\n/g, ' ') + '</p>').join('') + '</div>';
+  if (!g.zh) return body;
+  const id = sid + '-' + i;
+  return body +
+    `<button class="zhbtn" data-zh="${id}">全文中譯</button>` +
+    `<div class="zhbox" id="zh-${id}">` +
+      g.zh.split(/\n{2,}/).map(p => '<p>' + esc(p).replace(/\n/g, ' ') + '</p>').join('') +
+    '</div>';
+}
+
+function renderQ(q) {
+  const parts = [];
+  if (q.options) {
+    const ks = Object.keys(q.options);
+    parts.push('<div class="opts">' + ks.map(k =>
+      `<div class="opt"><span class="opt-k">(${k})</span><span>${esc(q.options[k])}</span></div>`).join('') + '</div>');
+  }
+  const head = `<div class="q-tag"><span class="q-n">${String(q.n).padStart(2,'0')}</span><span class="q-kind">${esc(q.kind || '')}</span></div>` +
+    (q.prompt ? `<p class="prompt">${esc(q.prompt)}</p>` : '') +
+    (q.stem ? `<p class="stem">${esc(q.stem).replace(/\n/g,'<br>')}</p>` : '');
+
+  let ans = '';
+  if (q.answers) {
+    ans = '<ul class="fills">' + q.answers.map(a =>
+      `<li class="fill"><span class="fill-k">${esc(a.k)}</span><span class="fill-w hl" data-ansmulti>${esc(a.w)}</span><span class="fill-n">${esc(a.note || '')}</span></li>`).join('') + '</ul>';
+  } else {
+    const label = q.options ? `(${q.answer}) ${esc(wordOf(q))}` :
+      (q.answer ? `(${q.answer}) ${esc(q.answerText)}` : esc(q.answerText));
+    ans = `<p class="ans"><span class="ans-k">答案</span><span class="ans-v hl" data-ans="${q.n}">${label}</span></p>`;
+  }
+
+  let expl = '';
+  if (q.explain) {
+    expl = '<ul class="lines">' + Object.keys(q.options).map(k => {
+      const right = q.multi ? q.multi.includes(k) : k === q.answer;
+      return `<li class="line ${right ? 'right' : 'wrong'}"><span class="line-k">(${k})</span><span>${esc(q.explain[k] || '')}</span></li>`;
+    }).join('') + '</ul>';
+  }
+  const why = q.why ? `<p class="why">${esc(q.why)}</p>` : '';
+  const sample = q.sample ? `<div class="sample"><p class="note-h">參考範文</p>` +
+    q.sample.split(/\n{2,}/).map(p => `<p>${esc(p).replace(/\n/g,' ')}</p>`).join('') + '</div>' : '';
+  const evid = q.evidence ? `<p class="evid"><span>文中依據</span>${esc(q.evidence)}</p>` : '';
+  const notes = (q.notes || []).length ? `<div class="note"><p class="note-h">重點整理</p>` +
+    q.notes.map(nt => `<p class="note-i"><span class="term">${esc(nt.term)}</span><span class="pos">${esc(nt.pos || '')}</span><span class="gloss">${esc(nt.gloss || '')}</span>` +
+      (nt.ex ? `<span class="ex">${esc(nt.ex)}<i>${esc(nt.exZh || '')}</i></span>` : '') + '</p>').join('') + '</div>' : '';
+
+  return `<article class="q" id="q-${q.n}" data-n="${q.n}">
+    <div class="q-top">${head}${parts.join('')}
+      <button class="reveal" aria-expanded="false" aria-controls="body-${q.n}">看詳解</button>
+    </div>
+    <div class="body" id="body-${q.n}">
+      ${ans}${q.translation ? `<p class="zh">${esc(q.translation)}</p>` : ''}${expl}${why}${evid}${sample}${notes}
+    </div>
+  </article>`;
+}
+
+document.getElementById('main').innerHTML = EXAM.sections.map((s, i) => `
+  <section class="sec" id="sec-${s.id}">
+    <div class="sec-head">
+      <span class="sec-num">${String(i+1).padStart(2,'0')}</span>
+      <h2 class="sec-label">${esc(s.label)}</h2>
+      <span class="sec-score">${esc(s.score || '')}</span>
+    </div>
+    ${s.instruction ? `<p class="sec-inst">${esc(s.instruction)}</p>` : ''}
+    ${s.bank ? `<div class="bank${s.bankWide ? ' wide' : ''}">${Object.keys(s.bank).map(k =>
+      `<div class="bank-i" data-bank="${k}"><span>(${k})</span>${esc(s.bank[k])}</div>`).join('')}</div>` : ''}
+    ${s.groups.map((g, gi) => (g.passage ? renderPassage(g, gi, s.id) : '') + g.questions.map(renderQ).join('')).join('')}
+  </section>`).join('');
+
+const items = [];
+allQ.forEach(q => (q.notes || []).forEach(nt => items.push({ ...nt, n: q.n })));
+document.getElementById('side').innerHTML = `
+  <p class="side-h">Notes</p>
+  <p class="side-t">本卷重點 ${items.length} 則</p>
+  <ul class="card-list">${items.map(nt => `
+    <li class="card-item"><a href="#q-${nt.n}">
+      <span class="jump">第 ${nt.n} 題</span>
+      <span class="term">${esc(nt.term)}</span><span class="pos">${esc(nt.pos || '')}</span>
+      <div class="gloss">${esc(nt.gloss || '')}</div>
+    </a></li>`).join('')}</ul>
+  <p class="side-note">點任一則可跳到出處題目。用瀏覽器列印（Ctrl／⌘ + P）會自動展開全部詳解與中譯，可直接印成講義。</p>`;
+
+document.getElementById('foot').textContent = `共 ${allQ.length} 題 · ${EXAM.footer}`;
+
+function setOpen(card, open) {
+  card.classList.toggle('open', open);
+  const btn = card.querySelector('.reveal');
+  btn.setAttribute('aria-expanded', open);
+  btn.firstChild.nodeValue = open ? '收合詳解' : '看詳解';
+  const n = card.dataset.n;
+  card.querySelectorAll('.hl').forEach(h => h.classList.toggle('on', open));
+  const ev = document.querySelector(`[data-ev="${n}"]`);
+  if (ev) ev.classList.toggle('on', open);
+  const q = findQ(n);
+  if (q && q.answer && q.answerText) {
+    const bi = document.querySelector(`[data-bank="${q.answer}"]`);
+    if (bi) bi.classList.toggle('used', open);
+  }
+  const bl = document.querySelector(`[data-blank="${n}"]`);
+  if (bl) {
+    if (open) {
+      bl.classList.add('filled');
+      bl.innerHTML = `<sup>${n}</sup><span class="hl">${esc(wordOf(q))}</span>`;
+      requestAnimationFrame(() => bl.querySelector('.hl').classList.add('on'));
+    } else {
+      bl.classList.remove('filled');
+      bl.textContent = n;
+    }
+  }
+}
+document.addEventListener('click', e => {
+  const rv = e.target.closest('.reveal');
+  if (rv) { const c = rv.closest('.q'); setOpen(c, !c.classList.contains('open')); return; }
+  const zb = e.target.closest('.zhbtn');
+  if (zb) { zb.classList.toggle('on'); document.getElementById('zh-' + zb.dataset.zh).classList.toggle('on'); return; }
+  const bl = e.target.closest('.blank');
+  if (bl) {
+    const c = document.getElementById('q-' + bl.dataset.blank);
+    if (!c.classList.contains('open')) setOpen(c, true);
+    c.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+});
+toggleAll.addEventListener('click', () => {
+  const open = toggleAll.textContent === '全部展開';
+  document.querySelectorAll('.q').forEach(c => setOpen(c, open));
+  toggleAll.textContent = open ? '全部收合' : '全部展開';
+});
+window.addEventListener('beforeprint', () => {
+  document.querySelectorAll('.q').forEach(c => setOpen(c, true));
+  document.querySelectorAll('.zhbox').forEach(b => b.classList.add('on'));
+  toggleAll.textContent = '全部收合';
+});
+</script>
+</body>
+</html>
